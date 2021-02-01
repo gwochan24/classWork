@@ -1,0 +1,230 @@
+.container{
+  padding:0;
+}
+nav>img{
+  width:55px;
+  height: 40px;;
+  right:20px;
+  display:inline-block;
+  border:5px solid aquamarine;
+  box-shadow:5px 5px 10px 5px gray;
+  border-radius: 3px;
+
+}
+.mobile-menu{
+  position: relative;
+}
+
+.menu{
+  padding: 0;
+  display:none;
+  flex-flow:column wrap;
+  justify-content: space-evenly;
+  top:40px;
+  right:20px;
+  width:200px;
+  border:1px solid black;
+  box-shadow:5px 5px 10px 5px gray;
+  border-radius: 0 0 3px 3px;
+  position: absolute;
+  background-color: aquamarine;
+  z-index: 20;
+}
+
+.submenu>li, .menu>li{
+  align-items: center;
+  list-style: none;
+  border-bottom: 2px solid pink;
+  background-color: aquamarine;
+  display: block;
+  position: relative;
+  padding:0;
+}
+
+.menu>li>a, .submenu li a{
+  text-decoration: none;
+  color:black;
+  border:none;
+  display: block;
+  width: auto;
+  padding:15px 8px;
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: 'Times New Roman', sans-serif;
+  
+}
+
+.submenu{
+  display:none;
+  top:0;
+  right:198px;
+  width:250px;
+  height:auto;
+  border:1px solid black;
+  box-shadow:5px 5px 10px 5px gray;
+  border-radius: 0 0 3px 3px;
+  background-color: aquamarine;
+  position: absolute;
+  z-index: 21;
+
+
+}
+
+.menu li:hover, .menu a:hover{
+  background-color: orange;
+
+}
+
+
+.menu>li:hover, .submenu>li:hover{
+  background-color: orange;
+}
+
+.mobile-menu:hover ul.menu{
+  display: flex;
+}
+
+.menu li:hover >ul{
+  display:block;
+  position:absolute;
+
+}
+
+
+
+.landing{
+  height:850px;
+  padding:10px 10px 10px 0;
+
+  background-color: rgba(0, 0, 255,0.7);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr );
+  grid-template-rows:auto auto auto auto;
+  grid-template-areas: 
+  "h h h h h h h h h h h h"
+  "i i i i i i i i i i i i"
+  "p p p p p p p p p p p p"
+  "b b b b b b b b b b b b";
+  height: auto;
+
+}
+.landing img{
+  grid-area: i;
+  padding: 0 10px;
+  width:100%;
+  height: auto;
+
+}
+.landing>p{
+  grid-area: p;
+  color:white;
+  font-size: 1.4em;
+  padding: 0 10px;
+ text-align: center;
+  
+}
+.landing h2{
+  grid-area: h;
+  color:white;
+  font-size: 2em;
+  padding:10px;
+ text-align: center;
+
+}
+
+.landing>div{
+  grid-area: b;
+  justify-self: center;
+  padding:0;
+
+}
+.landing>div>button{
+  display:inline-flex;
+  align-content: space-around;
+  margin-left:10vw;
+}
+.founders{
+  padding:10px 5px;
+}
+.founders>h3{
+  font-size: 1.4em;
+  color:white;
+}
+.founders>img{
+  width:50px;
+  height:35px;
+
+}
+
+.how{
+  display: flex;
+  flex-direction: column;
+
+}
+.how button {
+  align-self: center;
+}
+.how a{
+  margin: 0 5px 10px 5px;
+  box-shadow:5px 5px 10px 5px gray;
+}
+
+.partner-logo img{
+  width:70px;
+  margin:5px;
+}
+.partner-logo>.small-partner-logo{
+  width:140px;
+  height: 35px;
+}
+.partners{
+padding:0;
+}
+
+footer{
+  grid-area: f;
+  background-color: purple;
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: 
+  "a a a a a a a l l l l l"
+  "r r r r r r r l l l l l"
+  "s s s s . . . . . . . ."
+  ". p p p p p p p p p p ."
+  "c c c c c c c c c c c c";
+}
+
+#about{
+  padding: 20px;
+}
+ 
+#address{
+  padding: 20px;
+}
+
+#imp-links{
+  padding: 20px;
+
+}
+#imp-links a{
+  padding: 2px;
+}
+#partners{
+  padding:20px;
+  padding-bottom:60px;
+}
+#partners img{
+  width:70px;
+}
+#partners img.small-ciu-logo{
+  width: 160px;
+  height: auto;
+}
+#social-media{
+  padding: 10px;
+}
+#social-media>a img{
+  width:40px;
+  height: 40px;
+}

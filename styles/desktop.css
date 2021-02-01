@@ -9,11 +9,12 @@ body{
  
 }
 .container{
+  width:100%;
   background-color: pink;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 60px auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas: 
   "h h h h h h h h h h h h"
   "m m m m m m m m m m m m"
@@ -27,10 +28,10 @@ width:100%;
 background-color: rgba(218, 165, 32, 1);
 grid-area: h;
 display: inline-flex;
-justify-content: space-between;
-padding-top:10px;
+justify-content: space-around;
+align-items: baseline;
+padding:1px;
 z-index: 20;
-
 }
 
 main{
@@ -43,7 +44,8 @@ grid-area: m;
 
 }
 header>section{
-  align-items: center;
+  align-items:baseline;
+  margin:2px 10px 6px 10px;
 
 }
 header>nav{
@@ -54,34 +56,38 @@ nav>img{
   display:none;
 }
 .menu{
-  padding:10px;
+  padding:0px;
   display:inline-flex;
   justify-content: space-around;
+  
 }
 .menu>li{
   align-items: center;
   list-style: none;
-  margin-left:2px;
   position: relative;
+  margin:10px 10px 1px 0;
+  
 
 }
 .menu>li>a{
   text-decoration: none;
   color:black;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight:600;
+  font-size:0.8em;
   background-color: aquamarine;
   border:2px solid aquamarine;
-  padding:10px 10px;
+  padding:12px 8px;
   border-radius: 2px;
-  box-shadow: 2px 4px 2px black;
+  box-shadow: 2px 2px 2px black;
 }
+
 .submenu{
   display:none;
   width:200px;
   top:30px;
-  box-shadow:5px 5px 10px 5px gray;
   border-radius: 2px;
+  box-shadow: 2px 4px 2px black;
   border-top:10px solid transparent;
 }
 .submenu>li{
@@ -96,8 +102,8 @@ nav>img{
   text-decoration: none;
   color:black;
   display: block;
-  box-shadow: 2px 4px 2px black;
   border:1px solid black;
+  box-shadow: 2px 2px 2px black;
 }
 
 .submenu a{
@@ -105,12 +111,36 @@ nav>img{
   width:100%;
   
 }
-.menu li:hover, .menu a:hover{
+#apply-now #nav-apply-now a:hover,
+#admissions #nav-admissions a:hover,
+#career-path #nav-career-path a:hover,
+#project-repo #nav-project-repo a:hover, 
+#apply-now #nav-apply-now a:focus,
+#admissions #nav-admissions a:focus,
+#career-path #nav-career-path a:focus,
+#project-repo #nav-project-repo a:focus,
+#about-us #nav-about-us a:hover, 
+#about-us #nav-about-us a:focus, 
+.menu a:hover, .menu a:focus {
   background-color: orange;
   color:white;
+  outline: none;
 
 }
-.menu li:hover >ul{
+#apply-now #nav-apply-now>a,
+#admissions #nav-admissions>a,
+#career-path #nav-career-path>a,
+#project-repo #nav-project-repo>a, 
+#about-us #nav-about-us>a {
+  background-color: blue;
+  color: white;
+  padding: 12px 8px;
+  border-bottom: 5px solid transparent;
+
+}
+
+
+.menu li:hover >ul, .menu li:focus-within >ul{
   display:block;
   position:absolute;
   z-index: 21;
@@ -123,16 +153,15 @@ nav>img{
   border-radius: 50%;
   padding: 5px 10px;
   box-shadow: 2px 4px 2px black;
-  margin-left:10px;
+  margin:1px;
   position: relative;
-  top:-5px;
 }
 .landing{
   padding:10px;
   background-color:rgba(0, 0, 255, 0.8);
   display: grid;
   grid-template-columns: repeat(12, 1fr );
-  grid-template-rows: rauto auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas: 
   ". . h h h h i i i i . ."
   ". . p p p p i i i i . ."
@@ -142,10 +171,10 @@ nav>img{
 }
 .landing img{
   grid-area: i;
-  width:50vw;
+  width:150%;
   height: auto;
   z-index: 0;
-  padding-right:20vw;
+  padding-right:20%;
   padding-top:5vw;
  
 }
@@ -153,7 +182,7 @@ nav>img{
   grid-area: p;
   color:white;
   font-size: 1.4em;
-  padding-left: 0 8vw;
+  padding:5px 0.8vw;
   z-index: 1;
   margin:20px 0;
 }
@@ -161,7 +190,7 @@ nav>img{
   grid-area: h;
   color:white;
   font-size: 3em;
-  padding-left: 0 8vw;
+  padding:5px 0.8vw;
   z-index: 1;
 }
 .landing>div{
@@ -203,6 +232,7 @@ nav>img{
 
 }
 .how{
+  width:100%;
   padding:10px 0;
   background-color: lightgray;
   display: grid;
@@ -317,14 +347,15 @@ nav>img{
 .partners{
   background-color: beige;
   display: grid;
+  width: 100%;
+  padding:20px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto auto;
   grid-template-areas: 
   "h h h h h h h h h h h h"
   "p p p p p p p p p p p p"
   "p p p p p p p p p p p p";
-  box-shadow:2px 2px 4px 2px gray;
-  padding:20px; 
+
 }
 .partners h3{
   grid-area: h;
@@ -337,8 +368,10 @@ nav>img{
 }
 .partners div.partner-logo{
   grid-area: p;
-  float:left;
-  grid-template: auto auto auto/repeat(12,  1fr);
+  display:grid;
+    width:100%;
+    grid-template: repeat(3, auto) / repeat(5, auto);
+    grid-auto-flow: column dense;
  
 }
 .partner-logo img{
@@ -430,18 +463,13 @@ footer{
 #copyright{
   grid-area: c;
   background-color: black;
-  text-align: center;
   height: 40px;
-  display: flex;
-  justify-content: space-around;
-  border-top:3px solid white;
-  /* position: fixed;
-  width: 100%; */
+  border-top:1px solid white;
+  width: 100%;
   bottom:0;
-  margin:0;
   z-index: auto;
-
- 
+  display: flex;
+  justify-content: center;
 }
 #copyright>p{
   align-self: center;

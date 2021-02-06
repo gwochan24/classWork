@@ -1,0 +1,161 @@
+.container{
+  padding:0;
+}
+header{
+  grid-auto-flow: column-reverse;
+}
+header>section{
+  width:110px;
+}
+#logo{
+  font-size: 1em;
+  box-shadow:0 4px 2px 1px black;
+}
+
+nav>img{
+  left: 10px;
+  width:45px;
+  height: 40px;
+  top:5px;
+  box-shadow:2px 2px 5px 1px black;
+}
+.menu{
+  top:14px;
+  left:10px;
+  width:120px;
+}
+
+
+.submenu{
+  left:120px;
+  width:130px;
+}
+.menu li a{
+  font-size: 0.7em;
+}
+
+.landing{
+  grid-template-rows:auto auto auto auto auto;
+  grid-template-areas: 
+  "h h h h h h h h h h h h"
+  "i i i i i i i i i i i i"
+  "p p p p p p p p p p p p"
+  "b b b b b b b b b b b b";
+
+  height: auto;
+  box-shadow: 0 2px 3px 2px black;
+  border-radius: 2px;
+  justify-content: space-between;
+}
+
+.landing img{
+  grid-area: i;
+  padding: 10px 10px 0 10px;
+  width:100%;
+  height: auto;
+
+}
+
+.landing h2{
+  font-size: 1.2em;
+  padding:5px;
+  text-align: center;
+  line-height: 31px;
+  margin: 0;
+
+
+}
+.landing>p{
+  font-size: 0.9em;
+  padding:5px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.landing>div>p{
+  font-size: 0.8em;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+}
+.landing>div>button{
+  font-size: 1em;
+}
+
+.founders>h3{
+  font-size: 1em;
+  color:white;
+}
+
+.how{
+  width:auto;
+  padding:10px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+  "q q q"
+  "s s s"
+  "k k k"
+  "t t t"
+  "g g g"
+  "c c c";
+  box-shadow: 0 3px 8px 2px black;
+  margin:10px 3px;
+}
+
+.how>h3{
+  padding:0 10px;
+  color:cyan;
+}
+.how>p{
+  padding:10px;
+  margin-bottom:0;
+  text-align: center;
+}
+.how>.study-steps{
+  grid-template-columns: auto;
+  grid-template-rows: 50px 90px auto;
+  padding:0 5px;
+  margin-bottom:5px;
+  height: auto;
+}
+
+.howh{
+  font-size: 0.9em;
+  margin: 0;
+  text-align: center;
+}
+.howp{
+ font-size: 0.8em;
+ line-height: 19px;
+ text-align: center;
+}
+
+.how img{
+  width:50px;
+  margin:0;
+}
+.how button{
+  font-size: 0.7em;
+  width:100px;
+  margin: 10px auto;
+}
+
+.partners h3{
+  font-size: 1.4em;
+}
+#address p, #about p{
+  font-size: 0.6em;
+  line-height: 13px;
+}
+#address h3{
+  font-size: 0.7em;
+}
+#about h3, #social-media h3{
+  font-size: 0.5em;
+}
+#social-media>a img{
+  margin-top:2px;
+}

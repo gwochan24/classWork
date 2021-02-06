@@ -2,13 +2,18 @@
   padding:0;
 }
 header{
+  grid-template-areas: "m m m m m l";
   padding:0 1.5% 0 1.3%;
+
+}
+header nav{
+  justify-self: start;
 }
 
 nav>img{
   width:50px;
   height: 45px;
-  right: 0;
+  left: 0;
   display:inline-block;
   border:5px solid aquamarine;
   box-shadow: 2px 4px 2px black;
@@ -26,7 +31,7 @@ nav>img{
   flex-flow:column wrap;
   justify-content: space-evenly;
   top:14px;
-  right:0;
+  left:0;
   width:300px;
   border-top:15px solid transparent;
   border-radius: 0 0 3px 3px;
@@ -62,7 +67,7 @@ nav>img{
 .submenu{
   display:none;
   top:0;
-  right:300px;
+  left:300px;
   width:300px;
   height:auto;
   border:1px solid black;
@@ -95,7 +100,13 @@ nav>img{
 
 }
 
-
+.landing{
+  grid-template-rows:auto auto auto;
+  grid-template-areas: 
+  "h h h h h i i i i i i i"
+  "p p p p p b b b b b b b";
+  margin:5px 3px;
+}
 
 
 .landing img{
@@ -109,20 +120,20 @@ nav>img{
 .landing h2{
   grid-area: h;
   color:white;
-  font-size: 1.6em;
+  font-size: 1.2em;
   padding: 0 20px;
   text-align: left;
-  line-height: 40px;
-
+  line-height: 30px;
+  margin-left: 10px;
 
 }
 .landing>p{
   grid-area: p;
   color:white;
-  font-size: 1.1em;
+  font-size: 0.9em;
   padding: 0 20px;
  text-align: left;
- line-height: 30px;
+ line-height: 23px;
  margin:10px;
   
 }
@@ -139,6 +150,7 @@ nav>img{
 
 .founders{
   padding:10px 5px;
+  margin:5px 3px;
 }
 .founders>h3{
   font-size: 1.4em;
@@ -153,7 +165,6 @@ nav>img{
 .how{
   width:auto;
   padding:10px 20px;
-  background-color: rgb(88, 81, 81);
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: auto auto auto auto;
@@ -163,9 +174,9 @@ nav>img{
   "k k k k k k k k k k k k k k k k k k k k k k k k"
   "t t t t t t t t t t t t t t t t t t t t t t t t"
   "g g g g g g g g g g g g g g g g g g g g g g g g"
-  ". . . . . . . . . . c c c c . . . . . . . . . .";
+  ". . . . . . . . c c c c c . . . . . . . . . . .";
   box-shadow: 0 3px 8px 2px black;
-  margin:10px;
+  margin:5px 3px;
 }
 .how>h3{
   padding:0 20px;
@@ -205,8 +216,9 @@ nav>img{
 }
 .how button{
   box-shadow: 0 1px 8px 2px black;
-  width:150px;
-  margin:20px auto 10px auto;
+  width:160px;
+  justify-self: center;
+  align-self: center;
   background-color: orange;
 }
 
@@ -215,6 +227,7 @@ nav>img{
   grid-template-areas: 
   "h h h h h h h h h h h h"
   ". p p p p p p p p p p p";
+  margin:5px 3px;
   
 }
 .partners h3{

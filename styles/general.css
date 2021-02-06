@@ -7,7 +7,7 @@ body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
   color: cyan;
-  background-color: skyblue;
+  background-color: rgb(81, 122, 81);
  
 }
 .container{
@@ -36,6 +36,7 @@ align-items: baseline;
 padding:1px 1%;
 z-index: 20;
 justify-content: space-between;
+box-shadow: 2px 3px 8px 0 black;
 }
 
 main{
@@ -77,12 +78,14 @@ nav>img{
   color:black;
   text-transform: capitalize;
   font-weight:600;
-  font-size:0.8em;
+  font-size:0.7em;
   background-color: aquamarine;
-  border:2px solid aquamarine;
-  padding:10px 2px;
+  border:1px solid black;
+  border-bottom:4px solid black;
+  border-left:4px solid black;
+  padding:10px 5px;
   border-radius: 2px;
-  box-shadow: 0 3px 8px 2px black;
+  box-shadow: 0 2px 3px 1px black;
 }
 
 .submenu{
@@ -124,9 +127,13 @@ nav>img{
 #about-us #nav-about-us a:hover, 
 #about-us #nav-about-us a:focus, 
 .menu a:hover, .menu a:focus {
-  background-color: orange;
+  background-image: linear-gradient(orange,orange, purple);
+  background-repeat: none;
   color:white;
   outline: none;
+  border-top:4px solid black;
+  border-right:4px solid black;
+  box-shadow: 0 -3px 3px 1px black;
 
 }
 #apply-now #nav-apply-now>a,
@@ -134,11 +141,12 @@ nav>img{
 #career-path #nav-career-path>a,
 #project-repo #nav-project-repo>a, 
 #about-us #nav-about-us>a {
-  background-color: rgb(81, 122, 81);
+  background-color: purple;
   color: white;
-  padding: 13px 8px;
-  border-bottom: 5px solid transparent;
   box-shadow: none;
+  border-top:4px solid black;
+  border-right:4px solid black;
+  box-shadow: 0 -3px 3px 1px black;
 
 }
 
@@ -155,7 +163,7 @@ nav>img{
   border:4px solid aquamarine;
   border-radius: 50%;
   padding: 5px 10px;
-  box-shadow: 0 3px 8px 2px black;
+  box-shadow: 0 3px 2px 4px black;
   margin:1px;
   position: relative;
   color:black;
@@ -169,9 +177,10 @@ nav>img{
   grid-template-rows:auto auto auto auto;
   grid-template-areas: 
   "h h h h h i i i i i i i"
-  "p p p p p b b b b b b b";
+  "p p p p p i i i i i i i"
+  ". . . . . b b b b b b b";
   height: auto;
-  box-shadow: 0 3px 8px 2px black;
+  box-shadow: 0 2px 3px 2px black;
   border-radius: 2px;
   justify-content: space-between;
 }
@@ -187,7 +196,7 @@ nav>img{
 .landing h2{
   grid-area: h;
   color:white;
-  font-size: 1.6em;
+  font-size: 1.8em;
   padding:10px 0 0 20px;
   z-index: 1;
   line-height: 40px;
@@ -199,8 +208,8 @@ nav>img{
   font-size: 1.2em;
   padding:20px;
   z-index: 1;
-  margin:-60px 10px 0 20px;
   line-height: 30px;
+  margin:10px 0 0 20px;
 }
 .landing>div{
   grid-area: b;
@@ -365,7 +374,7 @@ nav>img{
   background-color: purple;
 }
 .partners{
-  background-color: rgb(81, 122, 81);
+  background-image:linear-gradient(rgb(81, 122, 81), beige,beige,beige,beige,beige,beige,beige,beige,rgb(81, 122, 81));
   display: grid;
   width:auto;
   margin: 10px;
@@ -540,4 +549,25 @@ footer>section {
   align-self: center;
   color:white;
   font-size: 0.7em;
+}
+
+#backbutton {
+  display: none;
+  position: fixed;
+  bottom:0;
+  right:3px;
+  z-index: 99;
+  border: none; 
+  outline: none; 
+  background-color: rgb(245, 23, 245); 
+  color: white; 
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 2px;
+  font-size: 18px;
+  box-shadow:0 2px 5px 1px black;
+}
+
+#backbutton:hover {
+  background-color: #555;
 }

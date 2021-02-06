@@ -16,6 +16,8 @@
     
   }
   .landing div p, .landing >p, .landing h2{
-     padding:10px 0.8vw;
+     padding:10px 0 10px 4vw;
  }
- 
+ .landing p{
+     margin-top:0;
+ }

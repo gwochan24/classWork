@@ -100,20 +100,12 @@ nav>img{
 
 .landing img{
   grid-area: i;
-  padding: 0 10px;
+  padding: 10px 10px 0 10px;
   width:100%;
   height: auto;
 
 }
-.landing>p{
-  grid-area: p;
-  color:white;
-  font-size: 1.2em;
-  padding: 0 20px;
- text-align: left;
- line-height: 30px;
-  
-}
+
 .landing h2{
   grid-area: h;
   color:white;
@@ -124,6 +116,16 @@ nav>img{
 
 
 }
+.landing>p{
+  grid-area: p;
+  color:white;
+  font-size: 1.1em;
+  padding: 0 20px;
+ text-align: left;
+ line-height: 30px;
+ margin:10px;
+  
+}
 
 .landing>div{
   grid-area: b;
@@ -132,15 +134,9 @@ nav>img{
 
 }
 .landing>div>p{
-  color:cyan;
-  font-weight: 800;
-  font-size: 1.2em;
+  font-size: 1em;
 }
-.landing>div>button{
-  display:inline-flex;
-  align-content: space-around;
-  margin-left:10vw;
-}
+
 .founders{
   padding:10px 5px;
 }

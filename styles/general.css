@@ -44,14 +44,14 @@ grid-area: m;
 header>section{
   grid-area: l;
   width:150px;
-  align-items:baseline;
-  margin:2px 10% 6px auto;
+  margin:2px 10% 6px 5%;
+  justify-self: start;
 
 }
 header>nav{
   grid-area:m;
   justify-self: end;
-align-items: center;
+  align-items: center;
 }
 nav>img{
   position:absolute;
@@ -169,12 +169,11 @@ nav>img{
   grid-template-rows:auto auto auto auto;
   grid-template-areas: 
   "h h h h h i i i i i i i"
-  "p p p p p i i i i i i i"
   "p p p p p b b b b b b b";
   height: auto;
   box-shadow: 0 3px 8px 2px black;
   border-radius: 2px;
-
+  justify-content: space-between;
 }
 .landing img{
   grid-area: i;
@@ -184,40 +183,61 @@ nav>img{
   padding:10px;
  
 }
+
+.landing h2{
+  grid-area: h;
+  color:white;
+  font-size: 1.6em;
+  padding:10px 0 0 20px;
+  z-index: 1;
+  line-height: 40px;
+  margin:10px 0 0 20px;
+}
 .landing>p{
   grid-area: p;
   color:white;
   font-size: 1.2em;
   padding:20px;
   z-index: 1;
-  margin:20px 0;
-  line-height: 35px;
-}
-.landing h2{
-  grid-area: h;
-  color:white;
-  font-size: 2em;
-  padding:20px;
-  z-index: 1;
-  line-height: 50px;
+  margin:-60px 10px 0 20px;
+  line-height: 30px;
 }
 .landing>div{
   grid-area: b;
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "p p p p p p p p p p p p"
+  ". a a a a . . l l l l .";
+  margin: 20px auto;
 
 }
 .landing>div p{
+  grid-area: p;
   color:cyan;
-  font-size: 1.4em;
-  margin:20px 0;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.apply{
+  grid-area: a;
+  height: 42px;
+}
+.learn-more{
+  grid-area: l;
+  height: 42px;
 }
 .landing>div>button{
   padding:10px;
-  margin:10px 30px 20px 30px;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 1.1em;
   border-radius: 2px;
   box-shadow: 0 3px 8px 2px black;
   background-color: orange;
   color:white;
+
+  
 }
 .landing>div>button:hover{
   background:purple;
@@ -332,18 +352,17 @@ nav>img{
 }
 .how>button{
   grid-area: c;
-  margin-top:20px;
-  padding:15px;
-  font-size: 1em;
-  background-color: purple;
-  color: white;
+  width:160px;
+  margin:20px auto;
+  padding:10px 5px;
+  font-size: 1.2em;
+  background-color: orange;
+  color: cyan;
   border-radius:3px;
   box-shadow: 0 3px 8px 2px black;
 }
 .how>button:hover{
-  background-color: orange;
-  color: white;
-
+  background-color: purple;
 }
 .partners{
   background-color: rgb(81, 122, 81);

@@ -1,10 +1,14 @@
 .container{
   padding:0;
 }
+header{
+  padding:0 1.5% 0 1.3%;
+}
+
 nav>img{
   width:50px;
-  height: 45px;;
-  right:20px;
+  height: 45px;
+  right: 0;
   display:inline-block;
   border:5px solid aquamarine;
   box-shadow: 2px 4px 2px black;
@@ -21,15 +25,13 @@ nav>img{
   display:none;
   flex-flow:column wrap;
   justify-content: space-evenly;
-  top:40px;
-  right:20px;
-  width:200px;
-  border:1px solid black;
-  box-shadow:5px 5px 10px 5px gray;
+  top:14px;
+  right:0;
+  width:300px;
+  border-top:15px solid transparent;
   border-radius: 0 0 3px 3px;
   position: absolute;
-  background-color: aquamarine;
-  z-index: 20;
+  z-index: 21;
 }
 
 .submenu>li, .menu>li{
@@ -40,6 +42,7 @@ nav>img{
   display: block;
   position: relative;
   padding:0;
+  margin:0;
 }
 
 .menu>li>a, .submenu li a{
@@ -52,17 +55,18 @@ nav>img{
   font-size: 1.3em;
   font-weight: 400;
   font-family: 'Times New Roman', sans-serif;
+  text-align: center;
   
 }
 
 .submenu{
   display:none;
   top:0;
-  right:198px;
-  width:250px;
+  right:300px;
+  width:300px;
   height:auto;
   border:1px solid black;
-  box-shadow:5px 5px 10px 5px gray;
+  box-shadow: 0 3px 8px 2px black;
   border-radius: 0 0 3px 3px;
   background-color: aquamarine;
   position: absolute;
@@ -93,22 +97,7 @@ nav>img{
 
 
 
-.landing{
-  height:850px;
-  padding:10px 10px 10px 0;
 
-  background-color: rgba(0, 0, 255,0.7);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr );
-  grid-template-rows:auto auto auto auto;
-  grid-template-areas: 
-  "h h h h h h h h h h h h"
-  "i i i i i i i i i i i i"
-  "p p p p p p p p p p p p"
-  "b b b b b b b b b b b b";
-  height: auto;
-
-}
 .landing img{
   grid-area: i;
   padding: 0 10px;
@@ -119,17 +108,20 @@ nav>img{
 .landing>p{
   grid-area: p;
   color:white;
-  font-size: 1.4em;
-  padding: 0 10px;
- text-align: center;
+  font-size: 1.2em;
+  padding: 0 20px;
+ text-align: left;
+ line-height: 30px;
   
 }
 .landing h2{
   grid-area: h;
   color:white;
-  font-size: 2em;
-  padding:10px;
- text-align: center;
+  font-size: 1.6em;
+  padding: 0 20px;
+  text-align: left;
+  line-height: 40px;
+
 
 }
 
@@ -138,6 +130,11 @@ nav>img{
   justify-self: center;
   padding:0;
 
+}
+.landing>div>p{
+  color:cyan;
+  font-weight: 800;
+  font-size: 1.2em;
 }
 .landing>div>button{
   display:inline-flex;
@@ -158,24 +155,66 @@ nav>img{
 }
 
 .how{
-  display: flex;
-  flex-direction: column;
+  width:auto;
+  padding:10px 20px;
+  background-color: rgb(88, 81, 81);
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+  "q q q q q q q q q q q q q q q q q q q q q q q q"
+  "s s s s s s s s s s s s s s s s s s s s s s s s"
+  "k k k k k k k k k k k k k k k k k k k k k k k k"
+  "t t t t t t t t t t t t t t t t t t t t t t t t"
+  "g g g g g g g g g g g g g g g g g g g g g g g g"
+  ". . . . . . . . . . c c c c . . . . . . . . . .";
+  box-shadow: 0 3px 8px 2px black;
+  margin:10px;
+}
+.how>h3{
+  padding:0 20px;
+  color:cyan;
+}
+.how>p{
+  padding:10px 20px;
+  color:cyan;
+}
+.how>.study-steps{
+  display: grid;
+  grid-template-columns: 60px 120px auto;
+  grid-template-rows: auto;
+  padding:0 20px;
+  margin-top:20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 8px 2px black;
+  border:1px solid grey;
+}
+.howh{
+  font-size: 1em;
+  margin: 0 20px 0 0;
+  color:cyan;
+}
+.howp{
+ text-align: justify;
+ font-size: 1em;
+ line-height: 25px;
+ color:cyan;
+}
 
+.how img{
+  width:60px;
+ justify-self: center;
+ padding:0;
+ margin: 0 20px 0 0;
 }
-.how button {
-  align-self: center;
-}
-.how a{
-  margin: 0 5px 10px 5px;
-  box-shadow:5px 5px 10px 5px gray;
+.how button{
+  box-shadow: 0 1px 8px 2px black;
+  width:150px;
+  margin:20px auto 10px auto;
+  background-color: orange;
 }
 
 .partners{
-  background-color: beige;
-  display: grid;
-  width: 100%;
-  padding:0;
-  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-template-areas: 
   "h h h h h h h h h h h h"
@@ -185,15 +224,6 @@ nav>img{
 .partners h3{
   grid-area: h;
   font-size: 1.6em;
-}
-.partners div.partner-logo{
-  grid-area: p;
-  display:grid;
-    width:auto;
-    height: auto;
-    grid-template: repeat(3, auto) / repeat(5, auto);
-    grid-auto-flow: column dense;
- 
 }
 
 .partner-logo img{

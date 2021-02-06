@@ -1,0 +1,21 @@
+.menu>li>a{
+    font-size: 0.9em;
+}
+.landing{
+    width:auto;
+    margin: 10px;
+    padding:10px;
+    background-color: rgb(81, 122, 81);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr );
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "h h h h h h i i i i i i"
+    "p p p p p p i i i i i i"
+    "b b b b b b i i i i i i";
+    
+  }
+  .landing div p, .landing >p, .landing h2{
+     padding:10px 0.8vw;
+ }
+ 

@@ -72,7 +72,7 @@ nav>img{
 .menu>li>a{
   text-decoration: none;
   color:black;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight:600;
   font-size:0.8em;
   background-color: aquamarine;
@@ -163,9 +163,9 @@ nav>img{
   grid-template-columns: repeat(12, 1fr );
   grid-template-rows: auto auto auto;
   grid-template-areas: 
-  ". . h h h h i i i i . ."
-  ". . p p p p i i i i . ."
-  ". . b b b b b b b b . .";
+  "h h h h h h i i i i . ."
+  "p p p p p p i i i i . ."
+  "b b b b b b b b b b . .";
 
 
 }
@@ -369,19 +369,22 @@ nav>img{
 .partners div.partner-logo{
   grid-area: p;
   display:grid;
-    width:100%;
+    width:auto;
+    height: auto;
     grid-template: repeat(3, auto) / repeat(5, auto);
     grid-auto-flow: column dense;
  
 }
+
 .partner-logo img{
-  width:150px;
-  margin:5px;
+  width:40%;
+  height: auto;
+  margin:10px 10%;
 
 }
 .partner-logo>.small-partner-logo{
-  width:170px;
-  height: 70px;
+  width:80%;
+  height:auto;
 }
 
 footer{
@@ -389,90 +392,128 @@ footer{
   background-color: purple;
   display:grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(5, auto);
   grid-template-areas: 
-  "a a a a a a a a a l l l"
-  "r r r r r r r r r l l l"
-  "s s s s . . . . . . . ."
-  ". p p p p p p p p p p ."
+  "a a a a p p p s s l l l"
+  "a a a a p p p s s l l l"
+  "a a a a p p p s s l l l"
+  "a a a a p p p s s l l l"
   "c c c c c c c c c c c c";
 }
-#about{
+
+footer>section {
   grid-area: a;
-  padding: 20px 10% 20px 30%;
   color: white;
+  border-right: 2px solid rgba(128, 128, 128,0.4);
 }
-#about h1, #address h3{
-   padding:10px 0;
-   
+#about p{
+  color: white;
+  font-size: 0.9em;
+  text-align: justify;
+  line-height: 20px;
+  margin:5px 5%;
+}
+#about h3, #partners>h3, #social-media>h3, #imp-links>h3{
+  font-size: 1em;
+  color: cyan;
+  margin:0;
+  padding: 7px;
+  border-bottom: 2px solid cyan;
+  text-align: center;
+  background:rgba(128, 128, 128,0.4);
+  width: 100%;
+}
+#address h3{
+  font-size: 1em;
+  color: cyan;
+  margin:10% 0 0 5%;
 }
  
-#address{
-  grid-area: r;
-  padding: 20px 10% 20px 30%;
+#address p{
   color:white;
-  font-size: 1em;
+  line-height: 20px;
+  margin:5px 5%;
+  font-size: 0.9em;
+  text-align: justify;
+
+  
 }
 
 #imp-links{
   grid-area: l;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  border-bottom:3px solid transparent;
-  padding: 20px 30% 20px 0;
+  justify-content: space-between;
+
 
 }
-#imp-links a{
+#imp-links p{
+  text-align: center;
+}
+#imp-links p:last-child{
+  margin-bottom: 20px;
+
+}
+#imp-links p a{
   color:white;
   text-decoration: none;
+  font-size: 0.8em;
+  border:2px solid transparent;
   padding: 5px;
+  
 }
+
 #imp-links a:hover{
-  border-bottom:3px solid white;
+  background-color: orange;
+  border:2px solid orange;
+  color:black;
 }
 #partners{
   grid-area: p;
   display: inline-flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin:10px;
-  padding: 40px 20%;
+  border-right: 2px solid rgba(128, 128, 128,0.4);
+
 }
+
 #partners img{
-  width:100px;
+  margin-top:10px;
+  width:30%;
 }
 #partners img.small-ciu-logo{
-  width: 200px;
+  width: 60%;
   height: auto;
 }
+
+
 #social-media{
-  padding: 20px 10% 20px 80%;
   grid-area: s;
   display:inline-flex;
-  justify-content: space-around;
-  align-items: center;
-  margin:10px;
+  flex-direction: column;
+  border-right: 2px solid rgba(128, 128, 128,0.4);
 }
 #social-media>a img{
-  width:50px;
-  height: 50px;
-  border:5px solid black;
+  width:40px;
+  height: 40px;
+  border:1px solid black;
   border-radius: 100%;
-}
+  margin:20px 35%;
+  
+} 
 #copyright{
   grid-area: c;
-  background-color: black;
-  height: 40px;
-  border-top:1px solid white;
+  background:rgba(128, 128, 128,0.4);
+  height: 30px;
+  border-top:1px solid cyan;
   width: 100%;
   bottom:0;
-  z-index: auto;
   display: flex;
   justify-content: center;
 }
 #copyright>p{
   align-self: center;
   color:white;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }

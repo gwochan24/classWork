@@ -170,16 +170,40 @@ nav>img{
   box-shadow:5px 5px 10px 5px gray;
 }
 
+.partners{
+  background-color: beige;
+  display: grid;
+  width: 100%;
+  padding:0;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 
+  "h h h h h h h h h h h h"
+  ". p p p p p p p p p p p";
+  
+}
+.partners h3{
+  grid-area: h;
+  font-size: 1.6em;
+}
+.partners div.partner-logo{
+  grid-area: p;
+  display:grid;
+    width:auto;
+    height: auto;
+    grid-template: repeat(3, auto) / repeat(5, auto);
+    grid-auto-flow: column dense;
+ 
+}
+
 .partner-logo img{
-  width:70px;
+  width:40%;
+  height: auto;
   margin:5px;
 }
 .partner-logo>.small-partner-logo{
-  width:140px;
-  height: 35px;
-}
-.partners{
-padding:0;
+  width:80%;
+  height:auto;
 }
 
 footer{

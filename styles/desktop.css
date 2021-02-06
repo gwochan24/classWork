@@ -350,11 +350,12 @@ nav>img{
   width: 100%;
   padding:20px;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto;
+  grid-template-rows:repeat(4, auto);
   grid-template-areas: 
   "h h h h h h h h h h h h"
-  "p p p p p p p p p p p p"
-  "p p p p p p p p p p p p";
+  ". p p p p p p p p p p p"
+  ". p p p p p p p p p p p"
+  ". p p p p p p p p p p p";
 
 }
 .partners h3{
@@ -377,13 +378,13 @@ nav>img{
 }
 
 .partner-logo img{
-  width:40%;
+  width:50%;
   height: auto;
   margin:10px 10%;
 
 }
 .partner-logo>.small-partner-logo{
-  width:80%;
+  width:100%;
   height:auto;
 }
 

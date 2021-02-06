@@ -187,45 +187,44 @@ footer{
   background-color: purple;
   display:grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(3 auto);
   grid-template-areas: 
-  "a a a a a a a l l l l l"
-  "r r r r r r r l l l l l"
-  "s s s s . . . . . . . ."
-  ". p p p p p p p p p p ."
+  "a a a a a a a a a s s s"
+  "a a a a a a a a a s s s"
   "c c c c c c c c c c c c";
-}
-
-#about{
-  padding: 20px;
-}
+  margin:0; 
+  justify-content: space-between;
  
-#address{
-  padding: 20px;
+}
+footer>section{
+  grid-area: a;
+  
+}
+#address p, #about p{
+  font-size: 0.8em;
+  padding:0;
+}
+#address h3{
+  font-size: 0.8em;
+  padding:0;
+  margin: 10px 0 0 20px;
+}
+#about h3, #social-media h3{
+  font-size: 0.8em;
 }
 
-#imp-links{
-  padding: 20px;
+#imp-links, #partners{
+  display: none;
 
-}
-#imp-links a{
-  padding: 2px;
-}
-#partners{
-  padding:20px;
-  padding-bottom:60px;
-}
-#partners img{
-  width:70px;
-}
-#partners img.small-ciu-logo{
-  width: 160px;
-  height: auto;
 }
 #social-media{
-  padding: 10px;
+  height:auto;
+  justify-content: stretch;
 }
+
+
 #social-media>a img{
-  width:40px;
-  height: 40px;
+  width:20px;
+  height: 20px;
+  margin-top:10px;
 }

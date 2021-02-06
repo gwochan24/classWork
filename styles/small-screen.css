@@ -2,13 +2,14 @@
   padding:0;
 }
 nav>img{
-  width:55px;
-  height: 40px;;
+  width:50px;
+  height: 45px;;
   right:20px;
   display:inline-block;
   border:5px solid aquamarine;
-  box-shadow:5px 5px 10px 5px gray;
+  box-shadow: 2px 4px 2px black;
   border-radius: 3px;
+  margin-top: -30px;
 
 }
 .mobile-menu{

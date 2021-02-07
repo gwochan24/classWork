@@ -377,7 +377,7 @@ nav>img{
   background-image:linear-gradient(rgb(81, 122, 81), beige,beige,beige,beige,beige,beige,beige,beige,rgb(81, 122, 81));
   display: grid;
   width:auto;
-  margin: 10px;
+  margin: 30px;
   box-shadow: 0 3px 8px 2px black;
   border-radius: 2px;
   padding:0;

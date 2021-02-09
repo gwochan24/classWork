@@ -120,13 +120,13 @@ nav>img{
 #admissions #nav-admissions a:hover,
 #career-path #nav-career-path a:hover,
 #project-repo #nav-project-repo a:hover, 
-#apply-now #nav-apply-now a:focus,
-#admissions #nav-admissions a:focus,
-#career-path #nav-career-path a:focus,
-#project-repo #nav-project-repo a:focus,
+#apply-now #nav-apply-now a:focus-within,
+#admissions #nav-admissions a:focus-within,
+#career-path #nav-career-path a:focus-within,
+#project-repo #nav-project-repo a:focus-within,
 #about-us #nav-about-us a:hover, 
-#about-us #nav-about-us a:focus, 
-.menu a:hover, .menu a:focus {
+#about-us #nav-about-us a:focus-within, 
+.menu a:hover, .menu a:focus-within {
   background-image: linear-gradient(orange,orange, purple);
   background-repeat: none;
   color:white;
@@ -147,6 +147,7 @@ nav>img{
   border-top:4px solid black;
   border-right:4px solid black;
   box-shadow: 0 -3px 3px 1px black;
+
 
 }
 

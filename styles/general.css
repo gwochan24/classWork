@@ -6,33 +6,41 @@
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
+  background-color: #404040;
  
 }
 h3, h2, p, a{
   color:rgb(177, 56, 56);
 }
 button{
-  background-color: purple;
+  background-color: orange;
   color:#adefd1;
+  font-weight: bold;
+  color:#404040;
+  padding:10px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  border-radius: 2px;
+  width: 150px;
+  height: 42px; 
+  box-shadow: 2px 2px 8px #909090;
+}
+button:hover{
+  box-shadow: 2px 2px 8px white;
+  color:#909090;
+  background-color:#404040;
 }
 .container{
-  width:100%;
+  width:auto;
+  margin: 0 10%;
+
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 
-  "h h h h h h h h h h h h"
-  "m m m m m m m m m m m m"
-  "f f f f f f f f f f f f";
-  background-color: rgb(241, 232, 232);
- 
 }
 header{
 position:sticky;
 top:0;
 width:auto;
-background-color: #303030;
+background-color: #909090;
 grid-area: h;
 display: grid;
 grid-template-columns:repeat(6, 1fr);
@@ -40,7 +48,8 @@ grid-template-rows: auto;
 align-items: baseline;
 padding:0 2%;
 z-index: 20;
-box-shadow:1px 2px 3px grey;
+box-shadow: 2PX 2PX 8PX #404040;
+
 }
 
 main{
@@ -52,6 +61,7 @@ header>section{
   grid-row: 1/2;
   width:150px;
   justify-self: end;
+  margin-right: -30px;
   
 
 }
@@ -60,7 +70,8 @@ header>nav{
   grid-row: 1/2;
   justify-self: stretch;
   align-items: center;
-  margin-left:15%;
+  margin:0 10% 0 10%;
+
 }
 nav>img{
   position:absolute;
@@ -99,7 +110,7 @@ grid-area: b;
   align-items: center;
   list-style: none;
   position: relative;
-  background-color:white;
+  background-color:#505050;
 
 }
 
@@ -115,9 +126,10 @@ grid-area: b;
   height: 100%;
   margin-left:2px;
   display: inline-block;
+  border:2px solid transparent;
   border-top:4px solid transparent;
   border-bottom: none;
-  background-color: #303030;
+  background-color: #909090;
   
 }
 
@@ -126,7 +138,8 @@ grid-area: b;
   width:200px;
   top:58px;
   border-radius: 2px;
-  background-color:white;
+  background-color:#606060;
+  box-shadow:-2px 2px 8px white;
 
 }
 .submenu>li{
@@ -139,10 +152,14 @@ grid-area: b;
 .submenu>li>a{
   text-decoration: none;
   display: block;
-  background-color: #00203F;
-  color: #adefd1;
+  background-color: #808080;
+  color: #fff;
   margin-bottom:2px;
+  border:2px solid transparent;
   border-top:4px solid transparent;
+}
+.submenu>li:first-child{
+  margin-top:2px;
 }
 
 .submenu a{
@@ -163,7 +180,7 @@ grid-area: b;
 .menu a:hover, .menu a:focus-within {
   background-color: orange;
   color:black;
-  /* border-left:2px solid white; */
+  border:2px solid white;
   border-top:4px solid white;
   border-bottom: none;
 }
@@ -172,9 +189,10 @@ grid-area: b;
 #career-path #nav-career-path>a,
 #project-repo #nav-project-repo>a, 
 #about-us #nav-about-us>a {
-  background-color: #adefd1;
-  color:  #00203F;
-  border-top:4px solid white;
+  background-color: #404040;
+  color:  #adefd1;
+  border:2px solid #606060;
+  border-top:4px solid #606060;
   border-bottom: none;
 
 
@@ -190,148 +208,202 @@ grid-area: b;
 #logo{
   font-size: 1.4em;
   font-weight: bolder;
-  background-color:#adefd1;
-  border:4px solid aquamarine;
+  border:4px solid #505050d2;
   border-radius: 50%;
   padding: 5px 10px;
   margin:1px;
   position: relative;
+  background-color: #404040;
+  color:  #adefd1;
+ 
   
 }
 .landing{
   width:auto;
-  margin: 10px;
-  background-image: linear-gradient(to right,rgba(173, 239, 209,0.5) 35%, rgb(157, 200, 141), rgba(173, 239, 209,0.5)80%);
   display: grid;
   grid-template-columns: repeat(12, 1fr );
-  grid-template-rows:auto auto auto auto;
+  grid-template-rows:auto auto;
   grid-template-areas: 
-  "h h h h h i i i i i i i"
-  "p p p p p i i i i i i i"
-  ". . . . . b b b b b b b";
+  "v v v v v s s s s s s s"
+  "b b b b b b b b b b b b";
   height: auto;
   border-radius: 2px;
   justify-content: space-between;
-  box-shadow:-1px 1px 5px grey;
+  position: relative;
+  margin-top:30px;
+ 
+
 
 }
-.landing img{
-  grid-area: i;
-  width:100%;
-  height: auto;
+.landing #slider{
+	overflow:hidden;
+  grid-area: s;
   z-index: 0;
-  padding:10px;
+  margin-right:10px;
+  position: absolute;
+  width: 100%;
+  left:-35%;
+}
+#slider figure{
+	position: relative;
+	width: 500%;
+	margin:0;
+	left:0;
+	animation: 40s slider infinite;
+  animation-timing-function: ease-in-out;
+}
+#slider figure img{
+	width:20%;
+	float:left;
+}
+@keyframes slider{
+	0%{
+		left:0;
+	}
+	20%{
+		left:0;
+	}
+	25%{
+		left:-100%;
+	}
+	45%{
+		left:-100%;
+	}
+	50%{
+		left:-200%;
+	}
+	70%{
+		left:-200%;
+	}
+	75%{
+		left:-300%;
+	}
+	95%{
+		left:-300%;
+	}
+	100%{
+		left:-400%;
+	}
+}
+.landing #value{
+  grid-area: v;
+  background-image: radial-gradient(rgba(128, 0, 128, 0.247)20%,rgba(128, 0, 128, 1));
+  width:79vw;
+  z-index: 1;
+  position: absolute;
+  height: 430Px;
+  
  
 }
-
 .landing h2{
-  grid-area: h;
-  font-size: 1.8em;
-  padding:10px 0 0 20px;
-  z-index: 1;
-  line-height: 40px;
-  margin:10px 0 0 20px;
+ color:white;
+ font-size: 3.3em;
+ margin:20px 40% 5px 6%;
+ line-height: 55px;
 }
-.landing>p{
-  grid-area: p;
-  font-size: 1.2em;
-  padding:20px;
-  z-index: 1;
-  line-height: 30px;
-  margin:10px 0 0 20px;
+.landing #value>p{
+  color:ivory;
+  font-size: 1em;
+  margin:20px 40% 5px 6%;
+  line-height: 35px;
 }
-.landing>div{
+#action-call{
   grid-area: b;
   display: grid;
   grid-template-columns: repeat(12, auto);
   grid-template-rows: auto auto;
   grid-template-areas: 
   "p p p p p p p p p p p p"
-  ". a a a a . . l l l l .";
-  margin: 20px auto;
+  "a a a . l l l . . . . .";
+  margin:0 40% 5px 6%;
 
 }
-.landing>div p{
+#action-call p{
   grid-area: p;
-  font-weight: 600;
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  color:white;
+  font-size: 2em;
 }
+
 .apply{
   grid-area: a;
-  height: 42px;
+
 }
 .learn-more{
   grid-area: l;
-  height: 42px;
+  background-color: transparent;
+  color:#909090;
 }
-.landing>div>button{
-  padding:10px;
-  text-transform: capitalize;
-  font-size: 1.1em;
-  border-radius: 2px;
 
-  
-}
 
 .founders{
   display:grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: auto;
+  grid-template-rows: 140px;
   width:auto;
-  margin: 10px;
-  box-shadow:-1px 1px 5px #2a2a2a;
   border-radius: 2px;
   align-items: center;
   padding:20px 10px;
-  background-color: #808080;
+  background-color: #909090;
+  margin:460px 0 10px 0;
+  z-index: 2;
+  box-shadow: 2PX 2PX 8PX #404040;
 }
 .founders>h3{
   font-size: 1.8em;
-  color:white;
+  color:#404040;
+  margin-left:10%;
 }
 .founders>img{
-  width:100px;
-  height:70px;
+  width:70px;
+  height:auto;
 
 }
+.founders>.small-img{
+  width:120px;
+}
 .how{
-  background-image: radial-gradient(circle, rgba(173, 239, 209,0.5), rgb(157, 200, 141));
+  background-color: transparent;
   width:auto;
-  margin: 10px;
-  box-shadow:-1px 1px 5px grey;
+  margin:40px 0 10px 0;
   border-radius: 2px;
   padding:10px 0;
   display: grid;
-  grid-template-columns: repeat(24, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
-  "q q q q q q q q q q q q q q q q q q q q q q q q"
-  ". . s s s s s s s s s s s s s s s s s s s s . ."
-  ". . k k k k k k k .t t t t t . . g g g g g . ."
-  ". . . . . . . . . . c c c c . . . . . . . . . .";
+  "q q q q q q q q q q q q"
+  "s s s s s s s s s s s s"
+  "k k k k t t t t g g g g"
+  ". . . . c c c c . . . .";
+ 
 }
 .how>h3{
   grid-area: q;
   justify-self: center;
   padding-bottom:10px;
+  color: white;
+  font-size: 2.8em;
 }
 .how>p{
   grid-area: s;
   justify-self: center;
   padding-bottom:20px;
+  color: #adefd1;
 }
 .how>.catalyst{
   grid-area: k; 
  
 }
 .how>.bootcamp{
-  grid-area: t; 
+  grid-area: t;
+  
 }
 
 
 .how>.gethired{
   grid-area: g; 
+  margin-right: 20px; 
 }
 .study-steps{
   border:2px solid transparent;
@@ -342,14 +414,16 @@ grid-area: b;
   padding:0 5px;
   border-radius: 3px;
   text-decoration: none;
-  background-color:#adefd1;
-  box-shadow:-1px 1px 5px grey;
+  background-color:#adefd177;
+  margin-left:20px;
+  box-shadow: 2px 2px 8px #404040;
 }
 .howh{
   text-align: center;
   font-weight: bold;
   font-size: 1.8em;
   padding: 5px 0;
+  color: rgba(255, 255, 255, 0.788);
 }
 
 .howp{
@@ -357,6 +431,7 @@ grid-area: b;
   font-size: 1.1em;
   padding:10px 0;
   line-height: 26px;
+  color:#404040;
 }
 
 .how>a:hover{
@@ -364,7 +439,7 @@ grid-area: b;
   
 }
 .catalyst:hover .howp, .catalyst:hover .howh,.bootcamp:hover .howp, .bootcamp:hover .howh,.gethired:hover .howp, .gethired:hover .howh{
-  color:#adefd1;
+  color:white;
 }
 
 
@@ -376,19 +451,16 @@ grid-area: b;
 }
 .how>button{
   grid-area: c;
-  width:160px;
-  margin:20px auto;
-  padding:10px 5px;
-  font-size: 1.2em;
   border-radius:3px;
+  width: 200px;
+  margin-top: 20px;
+  justify-self: center;
 }
 
 .partners{
-  background-image: linear-gradient(rgba(219, 245, 233, 0.9), rgba(195, 240, 179, 0.8));
-  box-shadow:-1px 1px 5px grey;
   display: grid;
   width:auto;
-  margin: 10px;
+  margin:10px 0;
   border-radius: 2px;
   padding:0;
   padding:10px 0 0 7%;
@@ -397,15 +469,18 @@ grid-area: b;
   grid-template-areas: 
   "h h h h h h h h h h h h"
   "p p p p p p p p p p p p";
+  box-shadow: 2px 2px 8px #404040;
+  background-color: #909090;
 
 }
 .partners h3{
   grid-area: h;
   text-align: center;
   font-weight: normal;
-  font-size: 2em;
+  font-size: 2.8em;
   margin-bottom: 20px;
   font-weight: bold;
+  color:white;
 }
 .partners div.partner-logo{
   grid-area: p;
@@ -576,4 +651,18 @@ footer>section {
 
 #backbutton:hover {
   background-color: #555;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50,50,50,0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }

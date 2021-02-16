@@ -7,25 +7,37 @@
     <section include-global-html= "partial/css.html"></section>
   </head>
   <body id="apply-now">
-    <div class="container">
       <header include-global-html="./partial/header.html"> </header>
-      <main>
+      <div id="overlay" onclick="off()"></div>
+      <main class="container">
         <section class="landing ">
-          <img src="../../images/coding.jpeg" alt="coding">
-          <h2>We're advancing Uganda's tech industry</h2>
-          <p>Developed in partnership with the tech sector, Refactory is the industry's blueprint for hiring developers.</p>
-        
-          <div>
-            <p>Apply now for the April 2021 intake!</p>
-            <button href= "../webpages/index.html" class="apply">Apply now</button>
-            <button href="../webpages/about.html" class="learn-more">Learn more</button>
+          <div id="slider">
+            <figure>
+              <img src="./images/webdesign.jpg" alt="coding">
+              <img src="./images/learn.jpg"alt="coding">
+              <img src="./images/mobilecode.jpg" alt="coding">
+              <img src="./images/scrum.jpg"alt="coding">
+              <img src="./images/webdesign.jpg" alt="coding">
+            </figure>
           </div>
+          <div id="value">
+            <h2>We're advancing Uganda's tech industry</h2>
+            <p>Developed in partnership with the tech sector, Refactory is the industry's blueprint for hiring developers.</p>
+            <div id="action-call">
+              <p>Apply now for the April 2021 intake!</p>
+              <button href= "../webpages/index.html" class="apply">Apply now</button>
+              <button href="../webpages/about.html" class="learn-more">Learn more</button>
+            </div>
+          </div>
+          
+          
+
         </section>
         <section class="founders">
           <h3>Refactory was founded by</h3>
           <img src="../../images/ciu.png" alt="partners">
-          <img src="../../images/ciup.png" alt="partners">
-          <img src="../../images/ciup1.png" alt="partners">
+          <img src="../../images/ciup.png" alt="partners" class="small-img">
+          <img src="../../images/ciup1.png" alt="partners" class="small-img">
         </section>
         <section class="how">
           <h3 class="howh">How does it work?</h3>
@@ -71,10 +83,8 @@
         </section>
 
         <button onclick="topFunction()" id="backbutton" title="Go to top">Back to top</button>
-        
       </main>
-      <footer include-global-html="./partial/footer.html"></footer>
-    </div>  
+      <footer include-global-html="./partial/footer.html"></footer> 
     <script src="./javascript/partialInclude.js">
     </script>
   </body>

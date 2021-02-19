@@ -200,7 +200,7 @@ let food = {
 };
 console.log(food.preparation());
 console.log(typeof food);
-*/
+
 
 //Assignment on Objects
 
@@ -317,3 +317,4 @@ const table = {
   seatNumber: "6 seater",
 };
 console.log("Features of object table:", table);
+*/

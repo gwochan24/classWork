@@ -6,7 +6,10 @@
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
-  background-color: #404040;
+  background-image: url(../images/background.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-attachment: fixed;
  
 }
 h3, h2, p, a{
@@ -40,7 +43,7 @@ header{
 position:sticky;
 top:0;
 width:auto;
-background-color: #909090;
+background-image:linear-gradient(to right, #202020, orangered);
 grid-area: h;
 display: grid;
 grid-template-columns:repeat(6, 1fr);
@@ -110,7 +113,7 @@ grid-area: b;
   align-items: center;
   list-style: none;
   position: relative;
-  background-color:#505050;
+
 
 }
 
@@ -129,17 +132,17 @@ grid-area: b;
   border:2px solid transparent;
   border-top:4px solid transparent;
   border-bottom: none;
-  background-color: #909090;
+  background-color: transparent;
   
 }
 
 .submenu{
   display:none;
   width:200px;
-  top:58px;
+  top:58px;                                                                                                                                                                                                                                    
   border-radius: 2px;
   background-color:#606060;
-  box-shadow:-2px 2px 8px white;
+  box-shadow:-1px 2px 8px white;
 
 }
 .submenu>li{
@@ -230,7 +233,7 @@ grid-area: b;
   border-radius: 2px;
   justify-content: space-between;
   position: relative;
-  margin-top:30px;
+ 
  
 
 
@@ -242,7 +245,7 @@ grid-area: b;
   margin-right:10px;
   position: absolute;
   width: 100%;
-  left:-35%;
+  left:-10%;
 }
 #slider figure{
 	position: relative;
@@ -287,7 +290,7 @@ grid-area: b;
 }
 .landing #value{
   grid-area: v;
-  background-image: radial-gradient(rgba(128, 0, 128, 0.247)20%,rgba(128, 0, 128, 1));
+  background-image:linear-gradient(to right, rgba(32, 32, 32, 0.5),rgba(32, 32, 32, 0.575), rgba(255, 68, 0, 0.308),rgba(255, 68, 0, 0.212));
   width:79vw;
   z-index: 1;
   position: absolute;
@@ -344,14 +347,14 @@ grid-area: b;
   border-radius: 2px;
   align-items: center;
   padding:20px 10px;
-  background-color: #909090;
+  background-image: linear-gradient(to right,rgba(255, 145, 0, 0.267), rgba(255, 0, 234, 0.267));
   margin:460px 0 10px 0;
   z-index: 2;
   box-shadow: 2PX 2PX 8PX #404040;
 }
 .founders>h3{
   font-size: 1.8em;
-  color:#404040;
+  color:#adefd1;
   margin-left:10%;
 }
 .founders>img{

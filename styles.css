@@ -2,9 +2,6 @@ body {
   margin: 0;
   padding: 0;
 }
-fieldset {
-  height: auto;
-}
 legend {
   margin-left: 5px;
 }
@@ -51,6 +48,7 @@ fieldset {
   border-radius: 3px;
   padding: 0;
   margin: 0;
+  height: auto;
 }
 .surround {
   background-color: rgb(233, 195, 124);
@@ -64,9 +62,10 @@ fieldset {
   grid-template-areas:
     "i i i n n n n n n n n n"
     "m m m v v v v v v v v v"
-    "s s s b b b r r g g g g";
+    "s s s s s s s s s s s s";
   font-size: 1em;
   margin: 5px;
+  padding: 2px;
 }
 .customer-id {
   grid-area: i;
@@ -84,68 +83,61 @@ fieldset {
   grid-area: v;
   margin: 3px;
 }
-.state {
+#state-toc {
   grid-area: s;
   margin: 3px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "s s s t t c c c c c c c";
+}
+.state {
+  grid-area: s;
 }
 #state {
-  grid-area: b;
+  grid-area: t;
   width: 50%;
   margin: 3px;
 }
+#state-toc div {
+  grid-area: c;
+  display: inline-flex;
+}
 #type-of-customer {
-  grid-area: r;
-  margin: 3px;
-  margin-left: -5px;
+  margin: 10px;
 }
 .type-of-customer {
-  grid-area: g;
-  margin: 3px;
-  margin-left: -30px;
+  margin: 5px;
 }
 #shipping-routes {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 0.3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
-    "u p p p p p f e e e e e"
+    "u u u u u u f f f f f f"
     ". . . . . . . . . . . ."
-    "s o o o o o x a a a a a";
+    "p p p p p p a a a a a a";
   font-size: 1em;
   margin: 5px;
-  justify-content: space-evenly;
+  align-content: space-around;
+  padding: 24px;
 }
-#ups {
+#ups-part {
   grid-area: u;
-  margin: 10px 3px;
+  height: 100%;
 }
-.ups {
-  grid-area: p;
-  margin: 10px 3px;
-}
-#fedEx {
+#fedex-part {
   grid-area: f;
-  margin: 10px 3px;
+  height: 100%;
 }
-.fedEx {
-  grid-area: e;
-  margin: 10px 3px;
+#postal-part {
+  grid-area: p;
+  height: 100%;
 }
-#postal-air {
-  grid-area: s;
-  margin: 10px 3px;
-}
-.postal-air {
-  grid-area: o;
-  margin: 10px 3px;
-}
-#fedEx-air {
-  grid-area: x;
-  margin: 10px 3px;
-}
-.fedEx-air {
+
+#fedex-air-part {
   grid-area: a;
-  margin: 10px 3px;
+  height: 100%;
 }
 
 #part-ordered {
@@ -412,43 +404,62 @@ fieldset {
 
 @media screen and (max-width: 486px) {
   legend {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   #cust-info,
   #shipping-routes,
   #part-ordered {
     height: auto;
   }
-  #ppp {
-    margin-left: -7px;
+  #cust-info {
+    display: flex;
+    flex-flow: column;
+    font-size: 1.3em;
+  }
+  #cust-info input {
+    text-align: right;
+  }
+  #state-toc {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+  #state {
+    width: 10%;
+  }
+  #toc {
+    display: inline-flex;
+    justify-content: space-around;
+  }
+  #type-of-customer {
+    margin: 10px 5px;
+  }
+  .type-of-customer {
+    margin: 5px;
+  }
+  #shipping-routes {
+    display: flex;
+    flex-flow: column;
+    font-size: 1.3em;
+  }
+  #shipping-routes > div {
+    display: inline;
   }
   #part-ordered {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:
-      "p p p p p p "
-      "l l l l l l"
-      "d d d d d d"
-      "i i i i i i"
-      "q q q q q q"
-      "o s s s s s";
+    display: flex;
+    flex-flow: column;
     margin: 5px;
     font-size: 1.3em;
   }
+  #part-ordered input {
+    text-align: right;
+  }
   #pppq {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto auto;
-    grid-template-areas: "p p p p p p" "q q q q q q";
+    display: flex;
+    flex-flow: column;
   }
   #ppp-input {
-    grid-area: p;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      "c c c c c c"
-      "e e e e e e";
+    display: flex;
+    flex-flow: column;
   }
   #ppp {
     margin: 3px;
@@ -458,7 +469,6 @@ fieldset {
   }
 
   #quantity-input {
-    grid-area: q;
     display: inline-flex;
     justify-content: space-between;
   }
@@ -467,42 +477,42 @@ fieldset {
     width: 100%;
     margin: 3px;
   }
+  #over-sized-cont {
+    display: inline-flex;
+    justify-content: center;
+  }
   #over-sized-container {
-    margin: 10px 5px;
+    margin: 10px 20px;
   }
   .over-sized-container {
     margin: 3px;
   }
 
   #output {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:
-      "c c c c c c"
-      "t t t t t t"
-      "s s s s s s"
-      "x x x x x x"
-      "p p p p p p"
-      "h h h h h h"
-      "o o o o o o"
-      "l l l l l l";
-    margin: 5px;
+    display: flex;
+    flex-flow: column;
     font-size: 1.3em;
   }
   #buttons {
-    grid-template-areas: "d d d d e e";
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+  }
+  #buttons input {
+    background-color: rgb(233, 195, 124);
+    border: 1px solid white;
+    padding: 5px;
+    outline: 1px solid white;
+  }
+  #exit .exit-btn {
+    padding: 5px 30px;
   }
   #buttons #comp-ord {
-    grid-area: d;
     display: flex;
-    justify-content: start;
+    margin-right: 3%;
   }
   #compute {
-    margin-right: 5%;
-  }
-  #buttons #exit {
-    grid-area: e;
+    margin-right: 8%;
   }
 }
 @media screen and (min-width: 993px) {

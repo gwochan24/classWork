@@ -14,38 +14,20 @@
           <legend>Customer Information</legend>
           <div id="cust-info">
             <label for="customer-id" class="customer-id">Customer ID:</label>
-            <input
-              type="text"
-              name="customer-id"
-              id="customer-id"
-              value="123-45-6789"
-              class="medium-input"
-            />
+            <input type="text" name="customer-id" id="customer-id" value="123-45-6789" class="medium-input"/>
+
             <label for="name" class="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              value="Ochan George"
-              class="large-input"
-            />
-            <label for="state" class="state">State:</label>
-            <input
-              type="text"
-              name="state"
-              id="state"
-              value="Ug"
-              class="small-input"
-            />
-            <input
-              type="checkbox"
-              name="type-of-customer"
-              id="type-of-customer"
-              checked
-            />
-            <label for="type-of -customer" class="type-of-customer"
-              >Retail Customer</label
-            >
+            <input type="text" name="name" id="name" value="Ochan George" class="large-input"/>
+            <div id="state-toc">
+              <label for="state" class="state">State:</label>
+              <input type="text" name="state" id="state" value="Ug" class="small-input"/>
+              <div id="toc">
+                <input type="checkbox" name="type-of-customer" id="type-of-customer"checked/>
+                <label for="type-of -customer" class="type-of-customer">Retail Customer</label
+              </div>
+              
+            </div>
+          
           </div>
         </fieldset>
       </form>
@@ -54,24 +36,22 @@
         <fieldset>
           <legend>Shipping</legend>
           <div id="shipping-routes">
-            <input type="radio" name="shipping" id="ups" value="UPS" checked />
-            <label for="ups" class="ups">UPS</label>
-            <input type="radio" name="shipping" id="fedEx" value="Fed Ex" />
-            <label for="fedEx" class="fedEx">Fed Ex Ground</label>
-            <input
-              type="radio"
-              name="shipping"
-              id="postal-air"
-              value="US Postal Air"
-            />
-            <label for="postal-air" class="postal-air">US Postal Air</label>
-            <input
-              type="radio"
-              name="shipping"
-              id="fedEx-air"
-              value="Fed Ex Air"
-            />
-            <label for="fedEx-air" class="fedEx-air">Fex Ex Air</label>
+            <div id="ups-part">
+              <input type="radio" name="shipping" id="ups" value="UPS" checked/>
+              <label for="ups" class="ups">UPS.</label>
+            </div>
+            <div id="fedex-part">
+              <input type="radio" name="shipping" id="fedEx" value="Fed Ex" />
+              <label for="fedEx" class="fedEx">Fed Ex Ground.</label>
+            </div>
+            <div id="postal-part">
+              <input type="radio" name="shipping" id="postal-air" value="US Postal Air"/>
+              <label for="postal-air" class="postal-air">US Postal Air.</label>
+            </div>
+            <div id="fedex-air-part">
+              <input type="radio" name="shipping" id="fedEx-air" value="Fed Ex Air"/>
+              <label for="fedEx-air" class="fedEx-air">Fex Ex Air.</label>
+            </div>
           </div>
         </fieldset>
       </form>
@@ -94,15 +74,10 @@
                 <input type="text" name="quantity" id="quantity" value="2" />
               </div>
             </div>
-
-            <input
-              type="checkbox"
-              name="over-sized-container"
-              id="over-sized-container"
-            />
-            <label for="over-sized-container" class="over-sized-container"
-              >Oversized Container?</label
-            >
+            <div id="over-sized-cont">
+              <input type="checkbox" name="over-sized-container" id="over-sized-container"/>
+              <label for="over-sized-container" class="over-sized-container">Oversized Container?</label>
+            </div>
           </div>
         </fieldset>
       </form>
@@ -115,15 +90,8 @@
             <input type="text" name="cost" id="cost" value="$15.02" />
             <label for="sales-tax" class="sales-tax">Sales Tax:</label>
             <input type="text" name="sales-tax" id="sales-tax" value="1.50" />
-            <label for="shipping-and-handling" class="shipping-and-handling"
-              >Shipping and Handling:</label
-            >
-            <input
-              type="text"
-              name="shipping-and-handling"
-              id="shipping-and-handling"
-              value="14.00"
-            />
+            <label for="shipping-and-handling" class="shipping-and-handling">Shipping and Handling:</label>
+            <input type="text" name="shipping-and-handling" id="shipping-and-handling" value="14.00"/>
             <label for="total" class="total">Total:</label>
             <input type="text" name="total" id="total" value="$30.52" />
           </div>

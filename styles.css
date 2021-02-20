@@ -524,11 +524,11 @@ fieldset {
     flex-flow: column;
   }
   #ppp {
-    margin: 3px 0;
+    margin: 3px;
     width: auto;
   }
   .ppp {
-    margin: 3px;
+    margin: 3px 0;
   }
 
   #quantity-input {

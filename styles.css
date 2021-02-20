@@ -546,7 +546,7 @@ fieldset {
     justify-content: center;
   }
   #over-sized-container {
-    margin: 5px 10px;
+    margin: 6px 10px 5px 25px;
   }
   .over-sized-container {
     margin: 5px;

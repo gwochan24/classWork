@@ -4,9 +4,15 @@ body {
 }
 legend {
   margin-left: 5px;
+  color: rgb(103, 21, 211);
+  font-weight: bold;
+  font-size: 1em;
 }
 input {
   font-size: 1em;
+  padding: 2px;
+  background-color: antiquewhite;
+  border-color: antiquewhite;
 }
 #check-out-info {
   background-color: bisque;
@@ -23,12 +29,14 @@ input {
 }
 #cust {
   grid-area: c;
+  margin-right: 15px;
 }
 #ship {
   grid-area: s;
 }
 #part {
   grid-area: p;
+  margin-right: 15px;
 }
 #out {
   grid-area: o;
@@ -43,9 +51,10 @@ form {
 }
 
 fieldset {
-  border: 3px solid white;
+  border: 3px solid rgb(243, 234, 217);
   background-color: rgb(233, 195, 124);
   border-radius: 3px;
+  box-shadow: 2px 2px 4px rgb(241, 196, 112), -2px 0 4px rgb(241, 196, 112);
   padding: 0;
   margin: 0;
   height: auto;
@@ -60,16 +69,17 @@ fieldset {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto auto;
   grid-template-areas:
-    "i i i n n n n n n n n n"
-    "m m m v v v v v v v v v"
+    "i i i i n n n n n n n n"
+    "m m m m v v v v v v v v"
     "s s s s s s s s s s s s";
   font-size: 1em;
   margin: 5px;
-  padding: 2px;
+  padding: 3px;
 }
 .customer-id {
   grid-area: i;
   margin: 3px;
+  align-self: center;
 }
 #customer-id {
   grid-area: n;
@@ -78,6 +88,7 @@ fieldset {
 .name {
   grid-area: m;
   margin: 3px;
+  align-self: center;
 }
 #name {
   grid-area: v;
@@ -89,10 +100,11 @@ fieldset {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "s s s t t c c c c c c c";
+  grid-template-areas: "s s s s t t c c c c c c";
 }
 .state {
   grid-area: s;
+  align-self: center;
 }
 #state {
   grid-area: t;
@@ -108,6 +120,7 @@ fieldset {
 }
 .type-of-customer {
   margin: 5px;
+  align-self: center;
 }
 #shipping-routes {
   display: grid;
@@ -120,7 +133,7 @@ fieldset {
   font-size: 1em;
   margin: 5px;
   align-content: space-around;
-  padding: 24px;
+  padding: 26px 10px;
 }
 #ups-part {
   grid-area: u;
@@ -145,10 +158,10 @@ fieldset {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, auto);
   grid-template-areas:
-    "p p p l l l l l l l l l"
-    "d d d i i i i i i i i i"
+    "p p p p l l l l l l l l"
+    "d d d d i i i i i i i i"
     "q q q q q q q q q q q q"
-    ". . o o o o s s s s s .";
+    "o o o o o o o o o o o o";
   margin: 5px;
   font-size: 1em;
 }
@@ -160,6 +173,7 @@ fieldset {
 .part-num {
   grid-area: p;
   margin: 3px;
+  align-self: center;
 }
 #descrip {
   grid-area: i;
@@ -168,58 +182,63 @@ fieldset {
 .descrip {
   grid-area: d;
   margin: 3px;
+  align-self: center;
 }
 #pppq {
   grid-area: q;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "p p p p p p p p q q q q";
-  grid-auto-flow: row;
+  grid-template-areas: "p p p p p p p . t t t t";
   justify-content: space-between;
+  margin: 5px 0;
 }
 #ppp-input {
   grid-area: p;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "c c c c c e e e e e e e";
+  grid-template-areas: "c c c c c c c e e e e e";
 }
 .ppp {
   grid-area: c;
-  margin: 3px;
+  margin: 5px 0;
+  align-self: center;
 }
 #ppp {
-  width: auto;
   grid-area: e;
-  margin-left: -10px;
-  margin-right: 20px;
+  text-align: right;
+  margin: 5px 0;
+  width: 100%;
 }
 #quantity-input {
-  grid-area: q;
-  display: inline-flex;
-  justify-content: space-between;
+  grid-area: t;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #quantity {
   width: 30%;
-  margin: 3px;
+  text-align: right;
+  margin: 5px;
 }
 .quantity {
-  grid-area: q;
-  margin: 3px;
+  margin: 5px;
+  align-self: center;
+}
+#over-sized-cont {
+  grid-area: o;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: ". . . . c o o o o o o o";
+  justify-content: center;
 }
 #over-sized-container {
-  grid-area: o;
-  margin-top: 10px;
-  align-self: end;
-  margin-left: 50%;
+  grid-area: c;
+  margin: 5px 3px;
 }
 .over-sized-container {
-  grid-area: s;
-  margin-top: 10px;
-  align-self: end;
-  margin-left: -25%;
+  grid-area: o;
 }
 
 #output {
@@ -272,50 +291,72 @@ fieldset {
 }
 
 @media screen and (max-width: 992px) {
-  #cust-info {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "i i i n n n n n n n n n"
-      "m m m v v v v v v v v v"
-      "s s s b b b r r g g g g";
-    font-size: 1em;
-    margin: 5px;
-  }
-
-  #shipping-routes {
-    grid-template-rows: 1fr 0.7fr 1fr;
-    font-size: 0.9em;
-  }
   body {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   input {
     font-size: 0.9em;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  #check-out-info {
-    margin: 5% 1%;
-  }
-  body {
-    font-size: 1em;
   }
   #cust-info {
     grid-template-areas:
       "i i i i n n n n n n n n"
       "m m m m v v v v v v v v"
-      "s s s s b b r r g g g g";
+      "s s s s s s s s s s s s";
     margin: 5px;
   }
-  #shipping-routes {
+  #state-toc {
+    grid-template-areas: "s s s s t t c c c c c c";
+  }
+
+  #part-ordered {
     grid-template-areas:
-      "u p p p p p f e e e e e"
-      "s o o o o o x a a a a a";
+      "p p p p l l l l l l l l"
+      "d d d d i i i i i i i i"
+      "q q q q q q q q q q q q"
+      "o o o o o o o o o o o o";
+  }
+  #pppq {
+    margin: 0;
+  }
+  #ppp-input {
+    grid-template-areas: "c c c c c c c e e e e e";
+    margin: 5px 0;
+  }
+  #ppp {
+    margin: 0;
+  }
+  #over-sized-cont {
+    grid-template-areas: ". . . . c o o o o o o o";
+  }
+  #cust-info {
+    padding: 1px 2px;
+  }
+  #shipping-routes {
+    padding: 21px 2px;
   }
 }
+@media screen and (max-width: 838px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  #check-out-info {
+    margin: 5% 1%;
+  }
+  body {
+    font-size: 0.9em;
+  }
+
+  #cust-info {
+    padding: 1px 2px;
+  }
+  #shipping-routes {
+    padding: 20px 0;
+  }
+}
+
 #buttons {
   display: grid;
   grid-template-areas: "d d . . . e";
@@ -367,6 +408,12 @@ fieldset {
 }
 
 @media screen and (max-width: 668px) {
+  body {
+    font-size: 1.2em;
+  }
+  legend {
+    font-size: 1em;
+  }
   #check-out-info {
     margin: 0;
     grid-template-columns: auto;
@@ -378,34 +425,41 @@ fieldset {
       "o o o o o o o o o o o o"
       "b b b b b b b b b b b b";
   }
-  #output {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:
-      "c c c c t t t t t t t t"
-      "s s s s x x x x x x x x"
-      "p p p p h h h h h h h h"
-      "o o o o l l l l l l l l";
+  #cust,
+  #part,
+  #out,
+  #ship,
+  #buttons {
+    margin: 10px 20px;
   }
-  #cust-info {
-    grid-template-areas:
-      "i i i n n n n n n n n n"
-      "m m m v v v v v v v v v"
-      "s s s b b b r r g g g g";
+  .type-of-customer {
     font-size: 1em;
   }
-  #shipping-routes {
+  #pppq {
+    margin: 5px 0;
+  }
+  #output {
     grid-template-areas:
-      "u p p p p p f e e e e e"
-      "s o o o o o x a a a a a";
+      "c c c t t t"
+      "s s s x x x"
+      "p p p h h h"
+      "o o o l l l";
+    margin: 5px;
   }
 }
 
 @media screen and (max-width: 486px) {
-  legend {
-    font-size: 1.2em;
+  body {
+    font-size: 1.1em;
   }
+  #cust,
+  #part,
+  #out,
+  #ship,
+  #buttons {
+    margin: 5px 2px;
+  }
+
   #cust-info,
   #shipping-routes,
   #part-ordered {
@@ -414,10 +468,16 @@ fieldset {
   #cust-info {
     display: flex;
     flex-flow: column;
-    font-size: 1.3em;
   }
   #cust-info input {
     text-align: right;
+  }
+  .customer-id,
+  .name,
+  .part-num,
+  .descrip,
+  .ppp {
+    align-self: flex-start;
   }
   #state-toc {
     display: inline-flex;
@@ -436,10 +496,13 @@ fieldset {
   .type-of-customer {
     margin: 5px;
   }
+  .type-of-customer {
+    font-size: 0.9em;
+  }
   #shipping-routes {
     display: flex;
     flex-flow: column;
-    font-size: 1.3em;
+    padding: 0;
   }
   #shipping-routes > div {
     display: inline;
@@ -448,7 +511,6 @@ fieldset {
     display: flex;
     flex-flow: column;
     margin: 5px;
-    font-size: 1.3em;
   }
   #part-ordered input {
     text-align: right;
@@ -462,13 +524,15 @@ fieldset {
     flex-flow: column;
   }
   #ppp {
-    margin: 3px;
+    margin: 3px 0;
+    width: auto;
   }
   .ppp {
     margin: 3px;
   }
 
   #quantity-input {
+    width: 100%;
     display: inline-flex;
     justify-content: space-between;
   }
@@ -491,7 +555,6 @@ fieldset {
   #output {
     display: flex;
     flex-flow: column;
-    font-size: 1.3em;
   }
   #buttons {
     display: flex;
@@ -515,6 +578,7 @@ fieldset {
     margin-right: 8%;
   }
 }
+
 @media screen and (min-width: 993px) {
   body {
     font-size: 1.2em;
@@ -523,11 +587,40 @@ fieldset {
     font-size: 0.9em;
   }
 }
+
 @media screen and (min-width: 1020px) {
   body {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   input {
     font-size: 1em;
+  }
+  #cust-info {
+    grid-template-areas:
+      "i i i n n n n n n n n n"
+      "m m m v v v v v v v v v"
+      "s s s s s s s s s s s s";
+    margin: 5px;
+  }
+  #state-toc {
+    grid-template-areas: "s s s t t t c c c c c c";
+  }
+
+  #part-ordered {
+    grid-template-areas:
+      "p p p l l l l l l l l l"
+      "d d d i i i i i i i i i"
+      "q q q q q q q q q q q q"
+      "o o o o o o o o o o o o";
+  }
+  #ppp-input {
+    grid-template-areas: "c c c c c e e e e e e e";
+    margin: 5px 0;
+  }
+  #ppp {
+    margin: 0 5px;
+  }
+  #over-sized-cont {
+    grid-template-areas: ". . . c o o o o o o o o";
   }
 }

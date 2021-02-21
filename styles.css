@@ -588,7 +588,7 @@ fieldset {
   }
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1110px) {
   body {
     font-size: 1.2em;
   }
@@ -622,5 +622,12 @@ fieldset {
   }
   #over-sized-cont {
     grid-template-areas: ". . . c o o o o o o o o";
+  }
+  #output {
+    grid-template-areas:
+      "c c c t t t"
+      "s s s x x x"
+      "p p p h h h"
+      "o o o l l l";
   }
 }

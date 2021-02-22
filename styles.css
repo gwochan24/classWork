@@ -377,6 +377,7 @@ fieldset {
   margin: 3px;
 }
 
+/* small laptop screens. */
 @media screen and (max-width: 992px) {
   body {
     font-size: 1.1em;
@@ -422,12 +423,14 @@ fieldset {
     padding: 21px 2px;
   }
 }
+
+/* This handles font size at this screen width. */
 @media screen and (max-width: 838px) {
   body {
     font-size: 1em;
   }
 }
-
+/* Tablet landscape screen. */
 @media screen and (max-width: 782px) {
   #check-out-info {
     margin: 5% 1%;
@@ -494,6 +497,7 @@ fieldset {
   padding: 3px 35px;
 }
 
+/* Tablet potrait screen. */
 @media screen and (max-width: 668px) {
   body {
     font-size: 1.2em;
@@ -535,6 +539,7 @@ fieldset {
   }
 }
 
+/* For potrait phone screen. */
 @media screen and (max-width: 486px) {
   body {
     font-size: 1.1em;
@@ -665,7 +670,7 @@ fieldset {
     margin-right: 8%;
   }
 }
-
+/* small font-size adjustment at this screen width. */
 @media screen and (min-width: 993px) {
   body {
     font-size: 1.2em;
@@ -675,6 +680,7 @@ fieldset {
   }
 }
 
+/* For large laptop screens. */
 @media screen and (min-width: 1110px) {
   body {
     font-size: 1.2em;

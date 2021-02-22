@@ -8,19 +8,35 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
+    <!-- Containing element for the entire input fields. -->
     <section id="check-out-info">
-      <form action="" id="cust" class="surround">
+
+      <!-- customer information cluster -->
+      <form action="" id="cust">
+        <!-- Bundles related forms together -->
+        
         <fieldset>
+          <!-- Labels the bundled forms -->
           <legend>Customer Information</legend>
+
+          <!-- This bundles all the labels and input fields found in customer information 
+             for independent positioning from other items in the form.-->
           <div id="cust-info">
+            <!-- Customer ID label and input -->
             <label for="customer-id" class="customer-id">Customer ID:</label>
             <input type="text" name="customer-id" id="customer-id" value="123-45-6789" class="medium-input"/>
 
+            <!-- Name label and input -->
             <label for="name" class="name">Name:</label>
             <input type="text" name="name" id="name" value="Ochan George" class="large-input"/>
+
+            <!-- Groups state and type of customer so that they are positioned as one item relative to other inputs -->
             <div id="state-toc">
               <label for="state" class="state">State:</label>
               <input type="text" name="state" id="state" value="Ug" class="small-input"/>
+
+              <!-- Groups the type of customer label and input so that they are positioned as one item. -->
               <div id="toc">
                 <input type="checkbox" name="type-of-customer" id="type-of-customer"checked/>
                 <label for="type-of -customer" class="type-of-customer">Retail Customer</label
@@ -32,48 +48,85 @@
         </fieldset>
       </form>
 
-      <form action="" id="ship" class="surround">
+      <!-- Shipping cluster -->
+      <form action="" id="ship">
+
+         <!-- Bundles related forms together -->
         <fieldset>
+          
+          <!-- Labels the bundled forms -->
           <legend>Shipping</legend>
+
+          <!-- This bundles all the labels and input fields found in shipping 
+           for independent positioning from other items in the form.-->
           <div id="shipping-routes">
+
+            <!-- The divs below group each label and its input  together so that they are positioned as one. -->
+            <!-- ups -->
             <div id="ups-part">
               <input type="radio" name="shipping" id="ups" value="UPS" checked/>
               <label for="ups" class="ups">UPS.</label>
             </div>
+
+            <!-- FedEx -->
             <div id="fedex-part">
               <input type="radio" name="shipping" id="fedEx" value="Fed Ex" />
               <label for="fedEx" class="fedEx">Fed Ex Ground.</label>
             </div>
+
+            <!-- US Postal Air -->
             <div id="postal-part">
               <input type="radio" name="shipping" id="postal-air" value="US Postal Air"/>
               <label for="postal-air" class="postal-air">US Postal Air.</label>
             </div>
+
+            <!-- FedEx Air -->
             <div id="fedex-air-part">
               <input type="radio" name="shipping" id="fedEx-air" value="Fed Ex Air"/>
               <label for="fedEx-air" class="fedEx-air">Fex Ex Air.</label>
             </div>
+
           </div>
         </fieldset>
       </form>
 
-      <form action="" id="part" class="surround">
+      <!-- Part Ordered Cluster -->
+      <form action="" id="part">
+
+         <!-- Bundles related forms together -->
         <fieldset>
+
+           <!-- Labels the bundled forms -->
           <legend>Part Ordered</legend>
+
+           <!-- This bundles all the labels and input fields found in part ordered
+           for independent positioning from other items in the form. -->
           <div id="part-ordered">
+
             <label for="part-num" class="part-num">Part Number:</label>
             <input type="text" name="part-num" id="part-num" value="10152" />
+
             <label for="descrip" class="descrip">Description:</label>
             <input type="text" name="descrip" id="descrip" value="Oil Filter" />
+
+            <!-- Groups price per part and quantity together so that they can be positioned as one. -->
             <div id="pppq">
+
+              <!-- price per part. -->
               <div id="ppp-input">
                 <label for="ppp" class="ppp">Price per part:</label>
-                <input type="text" name="ppp" id="ppp" value="$7.51" />
+                <input type="text" name="ppp" id="ppp" value="$7.51"/>
               </div>
+
+              <!-- quantity -->
               <div id="quantity-input">
                 <label for="quantity" class="quantity">Quantity:</label>
                 <input type="text" name="quantity" id="quantity" value="2" />
               </div>
+
             </div>
+
+
             <div id="over-sized-cont">
               <input type="checkbox" name="over-sized-container" id="over-sized-container"/>
               <label for="over-sized-container" class="over-sized-container">Oversized Container?</label>
@@ -82,34 +135,59 @@
         </fieldset>
       </form>
 
-      <form action="" id="out" class="surround">
+      <form action="" id="out">
+
+         <!-- Bundles related forms together -->
         <fieldset>
+          
+          <!-- Labels the bundled forms -->
           <legend>Output</legend>
+
+          <!-- Groups the items so that they are positioned together
+           for independent positioning from other items in the form. -->
           <div id="output">
+
             <label for="cost" class="cost">Cost:</label>
             <input type="text" name="cost" id="cost" value="$15.02" />
+
             <label for="sales-tax" class="sales-tax">Sales Tax:</label>
             <input type="text" name="sales-tax" id="sales-tax" value="1.50" />
+
             <label for="shipping-and-handling" class="shipping-and-handling">Shipping and Handling:</label>
             <input type="text" name="shipping-and-handling" id="shipping-and-handling" value="14.00"/>
+
             <label for="total" class="total">Total:</label>
             <input type="text" name="total" id="total" value="$30.52" />
+            
           </div>
+
         </fieldset>
       </form>
 
+
+      <!-- Buttons cluster. -->
       <form action="" id="buttons">
+
+        <!-- Groups the first 2 buttons together so that they can be positioned 
+          as one item relative to the exit button in the other div. -->
         <div id="comp-ord">
+
+          <!-- Compute button -->
           <div id="compute">
             <input type="button" value="Compute" />
           </div>
+
+          <!-- New order button -->
           <div id="new-order">
             <input type="button" value="New Order" />
           </div>
         </div>
+
+        <!-- Exit button -->
         <div id="exit">
           <input type="button" value="Exit" class="exit-btn" />
         </div>
+
       </form>
     </section>
   </body>

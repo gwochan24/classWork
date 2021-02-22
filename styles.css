@@ -2,18 +2,22 @@ body {
   margin: 0;
   padding: 0;
 }
+
 legend {
   margin-left: 5px;
   color: rgb(103, 21, 211);
   font-weight: bold;
   font-size: 1em;
 }
+
 input {
   font-size: 1em;
   padding: 2px;
   background-color: antiquewhite;
   border-color: antiquewhite;
 }
+
+/* Container section */
 #check-out-info {
   background-color: bisque;
   width: auto;
@@ -27,29 +31,43 @@ input {
     "p p p p p p p o o o o o"
     "b b b b b b b b b b b b";
 }
+
+/* Customer information form positioning. */
 #cust {
   grid-area: c;
   margin-right: 15px;
 }
+
+/* Ship information form positioning. */
 #ship {
   grid-area: s;
 }
+
+/* Part Ordered form positioning. */
 #part {
   grid-area: p;
   margin-right: 15px;
 }
+
+/* Output form positioning. */
 #out {
   grid-area: o;
 }
+
+/* Buttons positioning. */
 #buttons {
   grid-area: b;
 }
+
+/* General form styling. */
 form {
   background-color: wheat;
   padding: 0;
   margin: 5px;
+  background-color: rgb(233, 195, 124);
 }
 
+/* This produces the line that encloses related inputs and labels. */
 fieldset {
   border: 3px solid rgb(243, 234, 217);
   background-color: rgb(233, 195, 124);
@@ -59,11 +77,8 @@ fieldset {
   margin: 0;
   height: auto;
 }
-.surround {
-  background-color: rgb(233, 195, 124);
-  padding: 0;
-}
 
+/* Positions customer information inputs and labels. */
 #cust-info {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -76,24 +91,34 @@ fieldset {
   margin: 5px;
   padding: 3px;
 }
+
+/* customer id label. */
 .customer-id {
   grid-area: i;
   margin: 3px;
   align-self: center;
 }
+
+/* customer id input. */
 #customer-id {
   grid-area: n;
   margin: 3px;
 }
+
+/* name label. */
 .name {
   grid-area: m;
   margin: 3px;
   align-self: center;
 }
+
+/* name input. */
 #name {
   grid-area: v;
   margin: 3px;
 }
+
+/* State and type of customer inputs and labels. */
 #state-toc {
   grid-area: s;
   margin: 3px;
@@ -102,26 +127,38 @@ fieldset {
   grid-template-rows: auto;
   grid-template-areas: "s s s s t t c c c c c c";
 }
+
+/* State label. */
 .state {
   grid-area: s;
   align-self: center;
 }
+
+/* State input. */
 #state {
   grid-area: t;
   width: 50%;
   margin: 3px;
 }
+
+/* Type of customer input and label. */
 #state-toc div {
   grid-area: c;
   display: inline-flex;
 }
+
+/* Type of customer input. */
 #type-of-customer {
   margin: 10px;
 }
+
+/* Type of customer label. */
 .type-of-customer {
   margin: 5px;
   align-self: center;
 }
+
+/* Positions shipping inputs and labels. */
 #shipping-routes {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -135,24 +172,32 @@ fieldset {
   align-content: space-around;
   padding: 26px 10px;
 }
+
+/* ups input and label. */
 #ups-part {
   grid-area: u;
   height: 100%;
 }
+
+/* FedEx input and label. */
 #fedex-part {
   grid-area: f;
   height: 100%;
 }
+
+/* US Postal Air input and label. */
 #postal-part {
   grid-area: p;
   height: 100%;
 }
 
+/* FedEx Air input and label. */
 #fedex-air-part {
   grid-area: a;
   height: 100%;
 }
 
+/* Positions part ordered inputs and labels. */
 #part-ordered {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -166,24 +211,33 @@ fieldset {
   font-size: 1em;
 }
 
+/* Part Number input. */
 #part-num {
   grid-area: l;
   margin: 3px;
 }
+
+/* Part Number label. */
 .part-num {
   grid-area: p;
   margin: 3px;
   align-self: center;
 }
+
+/* Description input. */
 #descrip {
   grid-area: i;
   margin: 3px;
 }
+
+/* Description label. */
 .descrip {
   grid-area: d;
   margin: 3px;
   align-self: center;
 }
+
+/* Price per part and quantity inputs and labels. */
 #pppq {
   grid-area: q;
   display: grid;
@@ -192,6 +246,8 @@ fieldset {
   justify-content: space-between;
   margin: 5px 0;
 }
+
+/* Price per part input and label. */
 #ppp-input {
   grid-area: p;
   display: grid;
@@ -199,32 +255,43 @@ fieldset {
   grid-template-rows: auto;
   grid-template-areas: "c c c c c c c e e e e e";
 }
+
+/* Price per part label. */
 .ppp {
   grid-area: c;
   margin: 5px 0;
   align-self: center;
 }
+
+/* Price per part input. */
 #ppp {
   grid-area: e;
   text-align: right;
   margin: 5px 0;
   width: 100%;
 }
+
+/* Quantity input and label. */
 #quantity-input {
   grid-area: t;
   display: flex;
   justify-content: flex-end;
 }
 
+/* Quantity input. */
 #quantity {
   width: 30%;
   text-align: right;
   margin: 5px;
 }
+
+/* Quantity label. */
 .quantity {
   margin: 5px;
   align-self: center;
 }
+
+/* Over sized container input and label. */
 #over-sized-cont {
   grid-area: o;
   display: grid;
@@ -233,14 +300,19 @@ fieldset {
   grid-template-areas: ". . . . c o o o o o o o";
   justify-content: center;
 }
+
+/* Over sized container input. */
 #over-sized-container {
   grid-area: c;
   margin: 5px 3px;
 }
+
+/* Over sized container label. */
 .over-sized-container {
   grid-area: o;
 }
 
+/* Positions output inputs and labels. */
 #output {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -253,38 +325,53 @@ fieldset {
   margin: 5px;
 }
 
+/* cost input. */
 #cost {
   grid-area: t;
   margin: 3px;
   text-align: right;
 }
+
+/* cost label. */
 .cost {
   grid-area: c;
   margin: 3px;
 }
+
+/* sales tax input. */
 #sales-tax {
   grid-area: x;
   margin: 3px;
   text-align: right;
 }
+
+/* sales tax label. */
 .sales-tax {
   grid-area: s;
   margin: 3px;
 }
+
+/* Shipping and handing input. */
 #shipping-and-handling {
   grid-area: h;
   margin: 3px;
   text-align: right;
 }
+
+/* Shipping and handing label. */
 .shipping-and-handling {
   grid-area: p;
   margin: 3px;
 }
+
+/* Total input. */
 #total {
   grid-area: l;
   margin: 3px;
   text-align: right;
 }
+
+/* Total class. */
 .total {
   grid-area: o;
   margin: 3px;

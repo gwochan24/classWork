@@ -206,7 +206,6 @@ console.log(typeof food);
 
 //Object market
 let currentTime = new Date().getHours();
-currentTime = new Date().getHours(07);
 const market = {
   name: "Gulu Central Market",
   location: "Market Street",
@@ -317,4 +316,131 @@ const table = {
   seatNumber: "6 seater",
 };
 console.log("Features of object table:", table);
+
+
+function school(
+  numOfTrs,
+  catergory,
+  hm,
+  numOfCooks,
+  colorOfUniform,
+  typeOfSchool
+) {
+  this.numOfTrs = numOfTrs;
+  this.catergory = catergory;
+  this.hm = hm;
+  this.numOfCooks = numOfCooks;
+  this.colorOfUniform = colorOfUniform;
+  this.typeOfSchool = typeOfSchool;
+}
+let stJohnPaul2 = new school(
+  25,
+  "Private",
+  "Mr. Obita Walter",
+  7,
+  "white and navy blue",
+  "Mixed Boarding School"
+);
+let guluCentralHighSchool = new school(
+  20,
+  "private",
+  "Mr. Owani",
+  5,
+  "white and skyblue",
+  "Mixed Day and Boarding"
+);
+let guluSS = new school(
+  30,
+  "Government-Aided",
+  "Mr. Okello",
+  10,
+  "white and brown",
+  "Mixed Day"
+);
+
+console.log("St. John Paul II College:", stJohnPaul2);
+console.log("Gulu Central High School:", guluCentralHighSchool);
+console.log("Gulu Secondary School:", guluSS);
+
+console.log(stJohnPaul2.hm, ",", guluSS.hm, ",", guluCentralHighSchool.hm);
+
+const squirel = {
+  animalCategory: "Rodent",
+  description:
+    "Small animal with ginger fur, whiteline running on lateral side of the body and a tail that expands towards the end",
+  habitat: "underground in barrows",
+  climbAbility: true,
+  food: "Groundnuts and Tubers like sweet potatoes",
+  activeTime: function (time) {
+    if (currentTime >= 6 && currentTime < 19) {
+      return "Squirels are a wake and active";
+    } else {
+      return "Squirels are sleeping";
+    } //Determines activity of squirels.
+  },
+  edible: true,
+};
 */
+
+//Decides if the animal is sleeping or a wake depending behavior of animal and time.
+/*This is a template function for object animal. timeActive parameter keeps space for behavior of animal and
+then is used when function activeTime is called.*/
+
+var animal = function (
+  animalName,
+  animalCategory,
+  habitat,
+  climbAbility,
+  timeActive,
+  edibility
+) {
+  this.animalName = animalName;
+  this.animalCategory = animalCategory;
+  this.habitat = habitat;
+  this.climbAbility = climbAbility;
+  this.timeActive = timeActive;
+  this.edibility = edibility;
+};
+
+let animal1 = new animal("Squirel", "Rodent", "Barrows", true, "day", true);
+
+let animal2 = new animal(
+  "Bat",
+  "Mammal",
+  "Caves and dark forests",
+  true,
+  "night",
+  false
+);
+
+let animal3 = new animal("Goat", "Mammal", "Stays Home", false, "day", true);
+
+let animalArray = [animal1, animal2];
+animalArray.push(animal3);
+
+for (i = 0; i < animalArray.length; i++) {
+  animalName = animalArray[i].animalName;
+  let currentTime = new Date().getHours(); //Gets the hour of the day.
+  let activity = function (timeActive) {
+    if (timeActive == "day") {
+      if (currentTime >= 6 && currentTime < 19) {
+        return `${animalName}s are a wake and active now.`;
+      } else {
+        return `${animalName}s are sleeping now.`;
+      }
+    } else if (timeActive == "night") {
+      if (currentTime >= 19 || currentTime < 7) {
+        return `${animalName}s are a wake and active now.`;
+      } else {
+        return `${animalName}s are sleeping now.`;
+      }
+    } else {
+      return `${animalName}s choose when to be awake or sleep.`;
+    }
+  };
+  animalArray[i].activityStatus = activity(animalArray[i].timeActive);
+}
+
+console.log(animal1);
+console.log(animal2);
+console.log(animal3);

@@ -17,7 +17,7 @@ input {
   border-color: antiquewhite;
 }
 
-/* Container section */
+/* Container section - colors a round the form. */
 #check-out-info {
   background-color: bisque;
   width: auto;
@@ -61,8 +61,6 @@ input {
 
 /* General form styling. */
 form {
-  background-color: wheat;
-  padding: 0;
   margin: 5px;
   background-color: rgb(233, 195, 124);
 }
@@ -74,7 +72,7 @@ fieldset {
   border-radius: 3px;
   box-shadow: 2px 2px 4px rgb(241, 196, 112), -2px 0 4px rgb(241, 196, 112);
   padding: 0;
-  margin: 0;
+  margin: 0; /*removes the darker color from the outer side of the border.*/
   height: auto;
 }
 

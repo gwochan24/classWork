@@ -181,6 +181,7 @@ console.log(firstName.toUpperCase());
  *       A class is a blue-print of an object.
  *      An object is an instance of a class.
  */
+
 /*
 //Object in javascript
 let myObject = {};
@@ -380,6 +381,7 @@ const squirel = {
   },
   edible: true,
 };
+
 */
 
 //Decides if the animal is sleeping or a wake depending behavior of animal and time.

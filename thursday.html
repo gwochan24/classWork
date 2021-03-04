@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listening.</title>
+  </head>
+  <body>
+    <p>Initial me!</p>
+    <button>click me</button>
+  </body>
+  <script>
+    const p = document.querySelector('p');
+    const button = document.querySelector('button');
+    let changeText = () => {
+      p.textContent = 'I have changed because of the event propery!';
+    };
+    const alertText = () => {
+      alert('I was alerted to change because of the event propery!');
+    };
+    button.addEventListener('click', changeText);
+    button.addEventListener('dblclick', alertText);
+  </script>
+</html>

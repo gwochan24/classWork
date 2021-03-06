@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background-image: url(../../mainImages/subimages/sewage-truck.jpg);
+  background-attachment: fixed;
+  background-position: 0vw;
+  background-size: cover;
+  color: rgb(20, 20, 20);
+}
+
+/* Flex display with flex column. */
+body,
+main,
+#landing,
+#services,
+.card,
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Flex display with flex row. */
+header,
+#nav-bar ul,
+.slider-items,
+#blog {
+  display: flex;
+}
+
+/* General Button styling */
+button {
+  width: 150px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  background-color: blue;
+  font-size: 1em;
+  color: white;
+  font-weight: 700;
+  box-shadow: 1px 2px 5px black;
+  outline: none;
+}
+
+/* General box shadom */
+#landing h2,
+#landing p,
+header,
+.slider-group,
+.slider-items p,
+.slider-items img,
+.card,
+#blog {
+  box-shadow: 2px 2px 5px green, -2px -2px 5px green;
+}
+
+button:hover,
+button:focus,
+#landing #know-more:hover,
+#landing #know-more:focus {
+  background-color: #5a975a;
+  box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.425);
+  border: 2px solid #356835;
+  color: beige;
+}
+
+.container {
+  background-color: #5a975a65;
+}
+
+/* Entire header: containers logo and navigation menu. */
+header {
+  justify-content: space-around;
+  background-color: #5a975a;
+  top: 0;
+  position: sticky;
+  z-index: 2;
+}
+
+/* Logo containing div */
+#logo {
+  width: 160px;
+  border: 2px solid green;
+  margin: 10px 0;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.377),
+    2px -2px 6px rgba(255, 255, 255, 0.397),
+    -2px -2px 6px rgba(255, 255, 255, 0.384),
+    -2px 2px 3px rgba(255, 255, 255, 0.384);
+  font-weight: 700;
+}
+/* Logo text */
+#logo-text {
+  font-family: 'Lobster', cursive;
+  text-shadow: 1px 1px 2px #6432a7, -1px -1px 2px #6432a7;
+  font-size: 1.3em;
+  color: beige;
+  margin: 8px 20px;
+}
+
+#nav-bar ul {
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 5px 0 0 0;
+}
+
+#nav-bar ul li {
+  margin: 0 20px;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  /* Centers navbar items */
+  display: flex;
+  font-size: 1em;
+  font-weight: 500;
+}
+#nav-bar a:hover {
+  background-color: white;
+  color: black;
+}
+
+main {
+  background-color: rgba(183, 240, 183, 0.274);
+  margin: 0 5%;
+}
+
+#landing {
+  height: auto;
+  padding: 1%;
+  background-color: rgba(0, 255, 255, 0.432);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+#landing h2 {
+  font-size: 3em;
+  font-weight: 600;
+  grid-column: 1/7;
+  grid-row: 1/6;
+  margin-right: 20px;
+  padding: 10px 10px 10px 30px;
+  background-image: linear-gradient(
+    to right,
+    rgba(90, 151, 90, 0.616),
+    rgba(169, 236, 205, 0.712) 2%
+  );
+}
+
+#landing p {
+  grid-column: 7/-1;
+  grid-row: 1/6;
+  font-size: 1.4em;
+  line-height: 35px;
+  padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    rgba(169, 236, 205, 0.568) 98%,
+    rgba(90, 151, 90, 0.616)
+  );
+}
+
+#landing #order-now {
+  grid-column: 1/7;
+  grid-row: 6/-1;
+  justify-self: center;
+  margin-top: 10px;
+}
+#landing #know-more {
+  grid-column: 7/-1;
+  grid-row: 6/-1;
+  justify-self: center;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 255, 0.315);
+}
+
+/* styling for services slider */
+#services {
+  overflow: hidden;
+}
+#slider {
+  background-color: #5a975a;
+  width: 300%;
+  animation: 30s slider infinite;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+#services > h2 {
+  font-weight: 600;
+  font-size: 1.8em;
+  text-align: center;
+  color: rgb(3, 3, 3);
+  padding: 10px;
+  align-self: stretch;
+  margin-top: 10px;
+  background-image: linear-gradient(
+    rgba(90, 151, 90, 0.911),
+    rgba(169, 236, 205, 0.568) 25%
+  );
+}
+.slider-group {
+  margin: 1%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.slider-group > h3 {
+  margin: 10px;
+  color: beige;
+  font-size: 1.5em;
+}
+figure {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 0;
+  }
+  50% {
+    left: -100%;
+  }
+  75% {
+    left: -100%;
+  }
+
+  100% {
+    left: -200%;
+  }
+}
+
+.slider-items {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, auto);
+  padding: 2%;
+}
+.slider-items h3 {
+  grid-column: 1/12;
+  grid-row: 1/2;
+}
+
+.slider-items img {
+  grid-column: 1/6;
+  grid-row: 2/12;
+  width: 100%;
+}
+.slider-items p {
+  grid-column: 6/11;
+  grid-row: 2/12;
+  background-color: bisque;
+  align-self: stretch;
+  margin: 0 20px;
+  padding: 10px;
+  font-size: 1.1em;
+}
+.slider-items button {
+  grid-column: 11/12;
+  grid-row: 2/12;
+  align-self: center;
+  padding: 5px;
+  width: 130px;
+}
+
+#blog {
+  background-color: #5a975a;
+  display: flex;
+  padding: 1%;
+}
+.card {
+  display: flex;
+  background-color: rgba(0, 255, 255, 0.658);
+  padding: 2%;
+  margin: 10px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  color: rgb(51, 51, 34);
+}
+.card p {
+  color: rgb(51, 51, 34);
+  line-height: 25px;
+}

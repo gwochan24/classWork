@@ -4,237 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Logo font link: Lobster -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Body font link: Roboto -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="../../maincss/subcss/index.css" />
     <title>Clean Masters</title>
+    <section
+      include-global-html="../partialPages/publicResources.html"
+    ></section>
+    <link rel="stylesheet" href="../../maincss/subcss/index.css" />
   </head>
   <body>
-    <header>
-      <!-- logo: Stay Clean Masters -->
-      <section id="logo">
-        <p class="logo-text">Clean Masters</p>
-      </section>
+    <header include-global-html="../partialPages/publicHeader.html"></header>
 
-      <!-- Navbar public -->
-      <section id="nav-bar">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./requests.html">Order Service</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
-        </ul>
-      </section>
-    </header>
+    <main>
+      <section id="landing">
+        <div id="who-we">
+          <h2>Elegant waste disposal for all time freshness.</h2>
 
-    <section class="container">
-      <main>
-        <section id="landing">
-          <div id="who-we">
-            <h2>Elegant waste disposal for all time freshness.</h2>
-            <p>
-              <span class="logo-text">Clean Masters</span> is committed to
-              community health through waste management. We collect sewage and
-              gabage at affordable prices while educating our customers on best
-              waste management practices.
-            </p>
-            <div id="pricing" class="logo-text">
-              <div id="gabage-price">
-                <h3>Gabage Collection</h3>
-                <p>Ugx 25,000</p>
-                <h4>Subscription discount</h4>
-                <p>Ugx 20,000/6 months</p>
-              </div>
-              <div id="sewage-price">
-                <h3>Sewage Collection</h3>
-                <p>Ugx 175,000</p>
-                <h4>Subscription discount</h4>
-                <p>Ugx 160,000/6 months</p>
-              </div>
-            </div>
-            <button type="submit" id="know-more">Know More</button>
+          <div id="gabage-price" class="logo-text">
+            <h3>Gabage Collection</h3>
+            <p>Ugx 25,000</p>
+            <h4>Subscription discount</h4>
+            <p>Ugx 20,000/6 months</p>
           </div>
-          <form action="#" name="cust-info" id="cust-info">
-            <div id="cust-data">
-              <legend>Customer Information</legend>
-
-              <fieldset>
-                <legend id="name-field"></legend>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Full Name"
-                  class="text-inputs"
-                />
-              </fieldset>
-              <fieldset>
-                <legend id="email-field"></legend>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  class="text-inputs"
-                />
-              </fieldset>
-              <fieldset>
-                <legend id="phone-field"></legend>
-                <input
-                  type="tel"
-                  name="Phone"
-                  id="phone"
-                  placeholder="Phone Number"
-                  class="text-inputs"
-                />
-              </fieldset>
-              <fieldset>
-                <legend id="id-field"></legend>
-                <input
-                  type="text"
-                  name="id"
-                  id="national-id"
-                  placeholder="National ID"
-                  class="text-inputs"
-                />
-              </fieldset>
-              <fieldset>
-                <legend>Service required</legend>
-                <select name="service" id="service">
-                  <option value="#">Choose Service</option>
-                  <option value="sewage-collection">Sewage Collection</option>
-                  <option value="gabage-collection">Gabage Collection</option>
-                </select>
-              </fieldset>
-              <fieldset id="sub-status">
-                <legend>Subscription status</legend>
-                <div class="non-subscriber">
-                  <input
-                    type="radio"
-                    name="service-status"
-                    id="non-subscriber"
-                    value="non-subscriber"
-                  />
-                  <label for="non-subscriber"> Non-Subscriber.</label>
-                </div>
-
-                <div class="want-subscription">
-                  <input
-                    type="radio"
-                    name="service-status"
-                    id="want-subscription"
-                    value="want-subscription"
-                  />
-                  <label for="want-subscription">I want to subscribe.</label>
-                </div>
-                <div class="subscriber">
-                  <input
-                    type="radio"
-                    name="service-status"
-                    id="subscriber"
-                    value="subscriber"
-                  />
-                  <label for="subscriber"> Subscriber.</label>
-                </div>
-              </fieldset>
-              <button type="submit" id="order-now">Order Now</button>
-            </div>
-          </form>
-        </section>
-        <section id="services">
-          <h2>Services</h2>
-          <div id="slider">
-            <figure>
-              <div class="slider-group">
-                <h3>Gabage collection</h3>
-                <div class="slider-items">
-                  <img
-                    src="../../mainImages/subimages/orange-truck.jpg"
-                    alt="gabagge-truck"
-                  />
-                  <p>
-                    We handle every last piece of Gabage with committement to
-                    take it to the right place for recycling.
-                  </p>
-                  <button type="submit">Order Now</button>
-                </div>
-              </div>
-              <div class="slider-group">
-                <h3>Sewage Collection</h3>
-                <div class="slider-items">
-                  <img
-                    src="../../mainImages/subimages/sewage-truck.jpg"
-                    alt="sewage-truck"
-                  />
-                  <p>
-                    Clean masters ensures that, air in your compound is ever
-                    fresh and clean through skilled sewage handling.
-                  </p>
-                  <button type="submit">Order Now</button>
-                </div>
-              </div>
-              <div class="slider-group">
-                <h3>Gabage collection</h3>
-                <div class="slider-items">
-                  <img
-                    src="../../mainImages/subimages/orange-truck.jpg"
-                    alt="gabagge-truck"
-                  />
-                  <p>
-                    We handle every last piece of Gabage with committement to
-                    take it to the right place for recycling.
-                  </p>
-                  <button type="submit">Order Now</button>
-                </div>
-              </div>
-            </figure>
-          </div>
-        </section>
-      </main>
-    </section>
-    <footer>
-      <section id="main-footer">
-        <!-- **Address has to be detailed later. -->
-        <div id="address">
-          <h3>We are located:</h3>
-          <p>In Muyenga</p>
-        </div>
-
-        <div id="contacts">
-          <h3>Contact Us On:</h3>
-
-          <div id="phone-num">
-            <h3>Mobile:</h3>
-            <ul>
-              <li id="number1">0784847265</li>
-              <li id="number2">0755166405</li>
-            </ul>
+          <div id="sewage-price" class="logo-text">
+            <h3>Sewage Collection</h3>
+            <p>Ugx 175,000</p>
+            <h4>Subscription discount</h4>
+            <p>Ugx 160,000/6 months</p>
           </div>
 
-          <div id="email-address">
-            <h3>Email:</h3>
-            <ul>
-              <li id="email1">info@StayClean.com</li>
-              <li id="email2">gwochan24@gmail.com</li>
-            </ul>
-          </div>
+          <a href="../publicPages/custOrder.html" class="button btn-know-more"
+            >Know More</a
+          >
+          <a href="../publicPages/custOrder.html" class="button btn-order-now"
+            >Order Now</a
+          >
         </div>
       </section>
+      <section id="bio">
+        <p>
+          <span class="logo-text">Clean Masters</span> is committed to community
+          health through waste management. We collect sewage and gabage at
+          affordable prices while educating our customers on best waste
+          management practices.
+        </p>
+      </section>
+      <section id="services">
+        <h2>Services</h2>
+        <div id="slider">
+          <figure>
+            <div class="slider-items">
+              <h3>Gabage collection</h3>
+              <img
+                src="../../mainImages/subimages/orange-truck.jpg"
+                alt="gabagge-truck"
+              />
+              <p>
+                We handle every last piece of Gabage with committement to take
+                it to the right place for recycling.
+              </p>
+              <a href="../publicPages/custOrder.html" class="button"
+                >Order Now</a
+              >
+            </div>
 
-      <p id="copyright">&Copyright 2020</p>
-    </footer>
+            <div class="slider-items">
+              <h3>Sewage Collection</h3>
+              <img
+                src="../../mainImages/subimages/sewage-truck.jpg"
+                alt="sewage-truck"
+              />
+              <p>
+                Clean masters ensures that, air in your compound is ever fresh
+                and clean through skilled sewage handling.
+              </p>
+              <a href="../publicPages/custOrder.html" class="button"
+                >Order Now</a
+              >
+            </div>
+
+            <div class="slider-items">
+              <h3>Gabage collection</h3>
+              <img
+                src="../../mainImages/subimages/orange-truck.jpg"
+                alt="gabagge-truck"
+              />
+              <p>
+                We handle every last piece of Gabage with committement to take
+                it to the right place for recycling.
+              </p>
+              <a href="../publicPages/custOrder.html" class="button"
+                >Order Now</a
+              >
+            </div>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer include-global-html="../partialPages/publicFooter.html"></footer>
 
     <!-- Navbar private -->
     <!-- Home -->
@@ -249,5 +114,6 @@
     <!-- call to action. -->
     <!-- Testimonials -->
     <script src="../../mainJs/subjs/index.js"></script>
+    <script src="../../mainJs/partialJs/include.js"></script>
   </body>
 </html>

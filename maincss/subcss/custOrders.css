@@ -1,0 +1,69 @@
+/* Customer request form */
+#cust-info {
+  grid-column: 9/-1;
+  grid-row: 1/-1;
+  /* background-image: linear-gradient(
+    to right,
+    rgba(169, 236, 205, 0.568) 98%,
+    rgba(90, 151, 90, 0.616) 
+   ); */
+  color: #1e2631;
+  font-weight: 500;
+  font-size: 1.1em;
+  width: auto;
+}
+
+/* Outermost fieldset of the login form. */
+#cust-data {
+  width: auto;
+  padding: 10%;
+}
+#cust-data > legend {
+  text-align: center;
+}
+
+/* Hides fieldset border. */
+#cust-data > fieldset {
+  background-color: transparent;
+  margin: 5px 0;
+  border: 3px solid transparent;
+  width: fit-content;
+}
+
+/* Surrounds input with blue border on focus */
+#cust-data > fieldset:focus,
+#cust-data > fieldset:focus-within {
+  border: 3px solid blue;
+}
+
+.text-inputs {
+  display: block;
+  width: auto;
+  height: 30px;
+}
+
+#cust-info input:focus,
+select:focus-within {
+  outline: none;
+  border: 2px solid transparent;
+}
+
+#cust-data select {
+  margin: 5px;
+}
+
+#sub-status {
+  justify-content: space-around;
+}
+
+.non-subscriber,
+.want-subscription,
+.subscriber {
+  margin: 5px;
+}
+
+#non-subscriber,
+#want-subscription,
+#subscriber {
+  margin-right: 10px;
+}

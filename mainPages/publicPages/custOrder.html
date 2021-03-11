@@ -4,3 +4,114 @@
     service time:time picker, phone number, Service Requested: 3options:Sewage collections, Gabage collection, Both Sewage and Gabage collection: input - radio.
   Form of request: subscription, or one time-->
 <!-- Button: Place request. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Now</title>
+
+    <section
+      include-global-html="../partialPages/publicResources.html"
+    ></section>
+    <link rel="stylesheet" href="../../maincss/subcss/custOrders.css" />
+  </head>
+  <body>
+    <header include-global-html="../partialPages/publicHeader.html"></header>
+
+    <main>
+      <!-- Customer Order form -->
+      <form action="#" name="cust-info" id="cust-info">
+        <div id="cust-data">
+          <legend>Customer Information</legend>
+
+          <fieldset>
+            <legend id="name-field"></legend>
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              class="text-inputs"
+            />
+          </fieldset>
+          <fieldset>
+            <legend id="email-field"></legend>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              class="text-inputs"
+            />
+          </fieldset>
+          <fieldset>
+            <legend id="phone-field"></legend>
+            <input
+              type="tel"
+              name="Phone"
+              id="phone"
+              placeholder="Phone Number"
+              class="text-inputs"
+            />
+          </fieldset>
+          <fieldset>
+            <legend id="id-field"></legend>
+            <input
+              type="text"
+              name="id"
+              id="national-id"
+              placeholder="National ID"
+              class="text-inputs"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Service required</legend>
+            <select name="service" id="service">
+              <option value="#">Choose Service</option>
+              <option value="sewage-collection">Sewage Collection</option>
+              <option value="gabage-collection">Gabage Collection</option>
+            </select>
+          </fieldset>
+          <fieldset id="sub-status">
+            <legend>Subscription status</legend>
+            <div class="non-subscriber">
+              <input
+                type="radio"
+                name="service-status"
+                id="non-subscriber"
+                value="non-subscriber"
+              />
+              <label for="non-subscriber"> Non-Subscriber.</label>
+            </div>
+
+            <div class="want-subscription">
+              <input
+                type="radio"
+                name="service-status"
+                id="want-subscription"
+                value="want-subscription"
+              />
+              <label for="want-subscription">I want to subscribe.</label>
+            </div>
+            <div class="subscriber">
+              <input
+                type="radio"
+                name="service-status"
+                id="subscriber"
+                value="subscriber"
+              />
+              <label for="subscriber"> Subscriber.</label>
+            </div>
+          </fieldset>
+          <a href="../publicPages/custThankYou.html" class="button"
+            >Order Now</a
+          >
+        </div>
+      </form>
+    </main>
+
+    <footer include-global-html="../partialPages/publicFooter.html"></footer>
+    <script src="../../mainJs/partialJs/include.js"></script>
+  </body>
+</html>

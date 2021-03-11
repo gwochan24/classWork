@@ -1,0 +1,164 @@
+/* Resting all page in public */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* General body styling for all the pages in public. */
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/*General inputs */
+input,
+select {
+  font-size: 1em;
+  color: #1e2631;
+  font-weight: 500;
+}
+
+/* General Button styling */
+.button {
+  width: 100px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  background-color: blue;
+  font-size: 1em;
+  color: white;
+  font-weight: 700;
+  box-shadow: 1px 2px 5px black;
+  outline: none;
+
+  margin-top: 20px;
+  align-self: center;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #5a975a;
+  box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.425);
+  border: 2px solid #356835;
+  color: beige;
+}
+
+/* General anchor tag styling */
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Display grid styling for the all different public pages'elements */
+#landing,
+#who-we,
+.slider-items {
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  grid-template-rows: repeat(12, auto);
+}
+
+/* Flex display with flex column. */
+body,
+main,
+#landing,
+.card,
+#cust-data,
+#sub-status,
+#gabage-price,
+#sewage-price,
+#who-we-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Flex display with flex row. */
+header,
+#nav-bar ul,
+#blog,
+figure {
+  display: flex;
+}
+
+/* General green box shadow. */
+.slider-items p,
+.slider-items img,
+.card,
+#blog {
+  box-shadow: 2px 2px 5px green, -2px -2px 5px green;
+}
+
+/* White all around box shadow. */
+#logo,
+#gabage-price,
+#sewage-price {
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.377),
+    2px -2px 6px rgba(255, 255, 255, 0.397),
+    -2px -2px 6px rgba(255, 255, 255, 0.384),
+    -2px 2px 3px rgba(255, 255, 255, 0.384);
+}
+
+/* Entire header: containers logo and navigation menu. */
+header {
+  justify-content: space-between;
+  background-color: #5a975a;
+  top: 0;
+  position: sticky;
+  z-index: 2;
+  box-shadow: 2px 2px 5px green, -2px -2px 5px green;
+  padding: 0 5%;
+}
+
+/* Logo styling */
+#logo {
+  width: 160px;
+  border: 2px solid green;
+  margin: 10px 0;
+  border-radius: 50%;
+  font-weight: 700;
+}
+/* Logo text */
+.logo-text {
+  font-family: 'Lobster', cursive;
+  text-shadow: 1px 1px 2px #6432a7, -1px -1px 2px #6432a7;
+  font-size: 1.3em;
+  color: beige;
+  margin: 8px 20px;
+}
+
+/* Positioning for li within the ul */
+#nav-bar ul {
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 5px 0 0 0;
+}
+
+#nav-bar ul li {
+  margin: 0 20px;
+}
+
+/* Nav-bar items anchor styling. */
+#nav-bar a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  /* Centers navbar items */
+  display: flex;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+/* Hover and focus state for nav-bar anchor items. */
+#nav-bar a:hover,
+#nav-bar a:focus {
+  background-color: white;
+  color: black;
+  outline: none;
+}
+
+/* General public page styling for element main */
+main {
+  background-color: white;
+  margin: 0 5%;
+}

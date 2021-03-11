@@ -1,79 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  background-color: #5a975a;
-  background-attachment: fixed;
-  background-position: 0vw;
-  background-size: cover;
-  color: rgb(20, 20, 20);
-}
-
-/* Flex display with flex column. */
-body,
-main,
-#landing,
-#services,
-.card,
-.slider-group,
-#cust-data,
-#sub-status,
-#gabage-price,
-#sewage-price,
-#who-we {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Flex display with flex row. */
-header,
-#nav-bar ul,
-.slider-items,
-#blog,
-#pricing {
-  display: flex;
-}
-
-/* General Button styling */
-button {
-  width: 150px;
-  padding: 10px 20px;
-  border-radius: 3px;
-  border: 2px solid transparent;
-  background-color: blue;
-  font-size: 1em;
-  color: white;
-  font-weight: 700;
-  box-shadow: 1px 2px 5px black;
-  outline: none;
-}
-
-/* inputs */
-input,
-select {
-  font-size: 1em;
-  color: #1e2631;
-  font-weight: 600;
-}
-
-/* General green box shadow. */
-#who-we,
-#login-form,
-header,
-.slider-group,
-.slider-items p,
-.slider-items img,
-.card,
-#blog {
-  box-shadow: 2px 2px 5px green, -2px -2px 5px green;
-}
-
-button:hover,
-button:focus,
 #landing #know-more:hover,
 #landing #know-more:focus {
   background-color: #5a975a;
@@ -82,96 +6,30 @@ button:focus,
   color: beige;
 }
 
-.container {
-  background-color: rgba(255, 255, 255, 0.438);
-}
-
-/* Entire header: containers logo and navigation menu. */
-header {
-  justify-content: space-around;
-  background-color: #5a975a;
-  top: 0;
-  position: sticky;
-  z-index: 2;
-}
-
-/* White all around box shadow. */
-#logo,
-#gabage-price,
-#sewage-price {
-  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.377),
-    2px -2px 6px rgba(255, 255, 255, 0.397),
-    -2px -2px 6px rgba(255, 255, 255, 0.384),
-    -2px 2px 3px rgba(255, 255, 255, 0.384);
-}
-
-/* Logo styling */
-#logo {
-  width: 160px;
-  border: 2px solid green;
-  margin: 10px 0;
-  border-radius: 50%;
-  font-weight: 700;
-}
-/* Logo text */
-.logo-text {
-  font-family: 'Lobster', cursive;
-  text-shadow: 1px 1px 2px #6432a7, -1px -1px 2px #6432a7;
-  font-size: 1.3em;
-  color: beige;
-  margin: 8px 20px;
-}
-
-#nav-bar ul {
-  justify-content: space-evenly;
-  list-style-type: none;
-  margin: 5px 0 0 0;
-}
-
-#nav-bar ul li {
-  margin: 0 20px;
-}
-
-#nav-bar a {
-  text-decoration: none;
-  color: white;
-  padding: 20px;
-  /* Centers navbar items */
-  display: flex;
-  font-size: 1em;
-  font-weight: 500;
-}
-#nav-bar a:hover {
-  background-color: white;
-  color: black;
-}
-
-main {
-  background-color: #5a975a;
-  margin: 0 5%;
-}
-
 #landing {
   height: auto;
   padding: 1%;
-  background-color: rgba(0, 255, 255, 0.432);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
   justify-content: space-between;
   align-content: space-between;
 }
 
+/* Who are we and what we offer. */
+
 #who-we {
-  grid-column: 1/9;
+  grid-column: 1/-1;
   grid-row: 1/-1;
-  margin-right: 20px;
-  padding: 10px 10px 10px 30px;
-  background-image: linear-gradient(
+  justify-content: space-between;
+  align-content: center;
+
+  /* background-image: linear-gradient(
     to right,
     rgba(90, 151, 90, 0.616),
     rgba(169, 236, 205, 0.712) 2%
-  );
+  ); */
+}
+#who-we-text {
+  grid-column: 3/11;
+  grid-row: 1/12;
 }
 
 #who-we h2 {
@@ -192,9 +50,14 @@ main {
 }
 
 /*Service pricing  */
-#pricing {
-  justify-content: space-between;
-  padding: 5%;
+
+#gabage-price {
+  grid-column: 1/3;
+  grid-row: 1/12;
+}
+#sewage-price {
+  grid-column: 11/-1;
+  grid-row: 1/12;
 }
 #gabage-price,
 #sewage-price {
@@ -227,85 +90,20 @@ main {
   font-size: 1.1em;
 }
 
+/* order-now button */
+.btn-order-now {
+  grid-column: 1/6;
+  grid-row: 12/-1;
+  justify-self: center;
+}
+
 /* Know more button styling. */
-#know-more {
+.btn-know-more {
+  grid-column: 7/-1;
+  grid-row: 12/-1;
   margin-top: 10px;
   background-color: rgba(0, 0, 255, 0.315);
-  align-self: center;
-}
-
-/* Customer request form */
-#cust-info {
-  grid-column: 9/-1;
-  grid-row: 1/-1;
-  background-image: linear-gradient(
-    to right,
-    rgba(169, 236, 205, 0.568) 98%,
-    rgba(90, 151, 90, 0.616)
-  );
-  color: #1e2631;
-  font-weight: 500;
-  font-size: 1.1em;
-  width: auto;
-}
-
-/* Outermost fieldset of the login form. */
-#cust-data {
-  width: auto;
-  padding: 10%;
-}
-#cust-data > legend {
-  text-align: center;
-}
-
-/* Hides fieldset border. */
-#cust-data > fieldset {
-  background-color: transparent;
-  margin: 5px 0;
-  border: 3px solid transparent;
-  width: fit-content;
-}
-
-/* Surrounds input with blue border on focus */
-#cust-data > fieldset:focus,
-#cust-data > fieldset:focus-within {
-  border: 3px solid blue;
-}
-
-.text-inputs {
-  display: block;
-  width: auto;
-  height: 30px;
-}
-
-#cust-info input:focus,
-select:focus-within {
-  outline: none;
-  border: 2px solid transparent;
-}
-
-#cust-data select {
-  margin: 5px;
-}
-
-#sub-status {
-  justify-content: space-around;
-}
-
-.non-subscriber,
-.want-subscription,
-.subscriber {
-  margin: 5px;
-}
-
-#non-subscriber,
-#want-subscription,
-#subscriber {
-  margin-right: 10px;
-}
-
-#order-now {
-  margin-top: 20px;
+  justify-self: center;
   align-self: center;
 }
 
@@ -394,10 +192,8 @@ figure {
   padding: 10px;
   font-size: 1.1em;
 }
-.slider-items button {
+.slider-items .button {
   grid-column: 11/12;
   grid-row: 2/12;
   align-self: center;
-  padding: 5px;
-  width: 130px;
 }

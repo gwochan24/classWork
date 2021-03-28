@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 
 // Route files
-const bootcamps = require('./routes/bootcamps');
+const topics = require('./routes/topics');
 
 // Load in env
 dotenv.config({ path: './config/config.env' });
@@ -10,7 +10,7 @@ dotenv.config({ path: './config/config.env' });
 const app = express();
 
 // Mount routers
-app.use('/', bootcamps);
+app.use('/', topics);
 
 const PORT = process.env.PORT || 5000;
 
